@@ -2,3 +2,13 @@
   margin: 0;
   padding: 0;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.container__left {
+  margin-left: 235px;
+}
