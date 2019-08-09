@@ -22,6 +22,34 @@
                <div class="Search__browse div_flex">
                   <span>Browse</span>
                   <span class="browse__fa_caret"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                  <div class="drop search__drop">
+                     <div class="dropflex">
+                        <div class="drop__h3">Women</div>
+                        <ul class="drop__list">
+                           <li><a class="drop__link" href="">Dresses</a></li>
+                           <li><a class="drop__link" href="">Tops</a></li>
+                           <li><a class="drop__link" href="">Sweaters/Knits</a></li>
+                           <li><a class="drop__link" href="">Jackets/Coats</a></li>
+                           <li><a class="drop__link" href="">Blazers</a></li>
+                           <li><a class="drop__link" href="">Denim</a></li>
+                           <li><a class="drop__link" href="">Leggings/Pants</a></li>
+                           <li><a class="drop__link" href="">Skirts/Shorts</a></li>
+                           <li><a class="drop__link" href="">Accessories</a></li>
+                        </ul>
+                     </div>
+                     <div class="dropflex">
+                        <div class="drop__h3">Men</div>
+                        <ul class="drop__list">
+                           <li><a class="drop__link" href="">Tees/Tank tops</a></li>
+                           <li><a class="drop__link" href="">Shirts/Polos</a></li>
+                           <li><a class="drop__link" href="">Sweaters</a></li>
+                           <li><a class="drop__link" href="">Sweatshirts/Hoodies</a></li>
+                           <li><a class="drop__link" href="">Blazers</a></li>
+                           <li><a class="drop__link" href="">Jackets/vests</a></li>
+
+                        </ul>
+                     </div>
+                  </div>
                </div>
                <input type="text" class="Search__text" placeholder="Search for Item...">
                <button type="submit" class="Search__button"><i class="fa fa-search"></i></button>
@@ -38,15 +66,65 @@
          </div>
       </div>
    </header>
-   <ul class="menu">
-      <li class="menu__list"><a href="" class="menu__link">Home</a></li>
-      <li class="menu__list"><a href="" class="menu__link">Man</a></li>
-      <li class="menu__list"><a href="" class="menu__link">Women</a></li>
-      <li class="menu__list"><a href="" class="menu__link">Kids</a></li>
-      <li class="menu__list"><a href="" class="menu__link">Accoseriese</a></li>
-      <li class="menu__list"><a href="" class="menu__link">Featured</a></li>
-      <li class="menu__list"><a href="" class="menu__link">Hot Deals </a></li>
-   </ul>
+   <nav>
+      <!-- Список меню -->
+      <ul class="menu">
+         <li class="menu__list"><a href="" class="menu__link">Home</a></li>
+         <li class="menu__list">
+            <a href="" class="menu__link">Man</a>
+            <div class="drop menu__drop">
+               <!-- Выпадающее меню, завязанное на один из menu link -->
+               <div class="dropflex">
+                  <div class="drop__h3">Women</div>
+                  <ul class="drop__list">
+                     <li><a class="drop__link" href="">Dresses</a></li>
+                     <li><a class="drop__link" href="">Tops</a></li>
+                     <li><a class="drop__link" href="">Sweaters/Knits</a></li>
+                     <li><a class="drop__link" href="">Jackets/Coats</a></li>
+                     <li><a class="drop__link" href="">Blazers</a></li>
+                     <li><a class="drop__link" href="">Denim</a></li>
+                     <li><a class="drop__link" href="">Leggings/Pants</a></li>
+                     <li><a class="drop__link" href="">Skirts/Shorts</a></li>
+                     <li><a class="drop__link" href="">Accessories</a></li>
+                  </ul>
+               </div>
+               <div class="dropflex">
+                  <div class="drop__h3">Women</div>
+                  <ul class="drop__list">
+                     <li><a class="drop__link" href="">Dresses</a></li>
+                     <li><a class="drop__link" href="">Tops</a></li>
+                     <li><a class="drop__link" href="">Sweaters/Knits</a></li>
+                     <li><a class="drop__link" href="">Jackets/Coats</a></li>
+                  </ul>
+               </div>
+               <div class="dropflex">
+                  <div class="drop__h3">Women</div>
+                  <ul class="drop__list">
+                     <li><a class="drop__link" href="">Dresses</a></li>
+                     <li><a class="drop__link" href="">Tops</a></li>
+                     <li><a class="drop__link" href="">Sweaters/Knits</a></li>
+                  </ul>
+               </div>
+               <div class="dropflex">
+                  <div class="drop__h3">Women</div>
+                  <ul class="drop__list">
+                     <li><a class="drop__link" href="">Dresses</a></li>
+                     <li><a class="drop__link" href="">Tops</a></li>
+                     <li><a class="drop__link" href="">Sweaters/Knits</a></li>
+                     <li><a class="drop__link" href="">Jackets/Coats</a></li>
+                  </ul>
+               </div>
+               <img src="img/Drop_img_1.jpg" alt="" class="drop__img">
+               <span class="drop__img_text">Super<br>sale!</span>
+            </div>
+         </li>
+         <li class="menu__list"><a href="" class="menu__link">Women</a></li>
+         <li class="menu__list"><a href="" class="menu__link">Kids</a></li>
+         <li class="menu__list"><a href="" class="menu__link">Accoseriese</a></li>
+         <li class="menu__list"><a href="" class="menu__link">Featured</a></li>
+         <li class="menu__list"><a href="" class="menu__link">Hot Deals </a></li>
+      </ul>
+   </nav>
    <div class="promo">
       <div class="promo__back div_flex">
          <div class="promo__line"></div>
@@ -227,27 +305,27 @@
       <nav class="footer__nav">
          <ul class="footer__category">
             <span class="footer__category_name">COMPANY</span> <!-- span.footer__category_name{ -->
-            <li><a class="footer__link" href="#">Home</a></li>
-            <li><a class="footer__link" href="#">Shop</a></li>
-            <li><a class="footer__link" href="#">About</a></li>
-            <li><a class="footer__link" href="#">How It Works</a></li>
-            <li><a class="footer__link" href="#">Contact</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Home</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Shop</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">About</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">How It Works</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Contact</a></li>
          </ul>
          <ul class="footer__category">
             <span class="footer__category_name">INFORMATION</span>
-            <li><a class="footer__link" href="#">Tearms & Condition</a></li>
-            <li><a class="footer__link" href="#">Privacy Policy</a></li>
-            <li><a class="footer__link" href="#">How to Buy</a></li>
-            <li><a class="footer__link" href="#">How to Sell</a></li>
-            <li><a class="footer__link" href="#">Promotion</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Tearms & Condition</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Privacy Policy</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">How to Buy</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">How to Sell</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Promotion</a></li>
          </ul>
          <ul class="footer__category">
             <span class="footer__category_name">SHOP CATEGORY</span>
-            <li><a class="footer__link" href="#">Men</a></li>
-            <li><a class="footer__link" href="#">Women</a></li>
-            <li><a class="footer__link" href="#">Child</a></li>
-            <li><a class="footer__link" href="#">Apparel</a></li>
-            <li><a class="footer__link" href="#">Brows All</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Men</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Women</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Child</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Apparel</a></li>
+            <li class="drop__link"><a class="footer__link" href="#">Brows All</a></li>
          </ul>
       </nav>
    </div>
@@ -264,3 +342,6 @@
 </body>
 
 </html>
+<!-- .Search__browse:hover .search__drop {
+   display: flex;
+} -->

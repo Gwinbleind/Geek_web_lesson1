@@ -7,6 +7,10 @@ a {
    text-decoration: none;
 }
 
+ul {
+   list-style: none;
+}
+
 body {
    font-family: 'Lato', sans-serif;
 }
@@ -35,6 +39,7 @@ body {
    font-weight: 300;
    /*line-height: 32px;*/
    letter-spacing: 0.35px;
+   position: relative;
 }
 
 .header {
@@ -337,7 +342,7 @@ body {
    margin-left: 14px;
    margin-top: 17px;
    margin-bottom: 21px;
->>>>>>> Stashed changes
+   > > > > > > > Stashed changes
 }
 
 .feature {
@@ -706,4 +711,94 @@ body {
 .social__border:hover {
    background-color: #f16d7f;
    color: #f7f7f8;
+}
+
+.drop {
+   /* Style for "Rounded Re" */
+   border-radius: 5px;
+   background-color: #ffffff;
+   padding: 20px;
+   flex-flow: column wrap;
+   justify-content: space-between;
+   align-content: space-between;
+}
+
+.menu__list {
+   position: relative;
+}
+
+
+
+.drop__h3 {
+   /* Style for "Women" */
+   color: #232323;
+   font-size: 14px;
+   font-weight: 400;
+   text-transform: uppercase;
+   /* Text style for "W, omen" */
+   letter-spacing: 0.35px;
+   width: 235px;
+   border-bottom: 1px solid #e8e8e8;
+   padding-bottom: 8px;
+}
+
+
+
+.drop__link {
+   /* Style for "Dresses To" */
+   color: #646464;
+   font-size: 14px;
+   font-weight: 400;
+   /* Text style for "Dresses ," */
+   letter-spacing: 0.35px;
+   display: block;
+   margin-bottom: 8px;
+   margin-top: 8px;
+}
+
+
+
+.drop__list {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.drop__img {
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+}
+
+.drop__img_text {
+   /* Style for "Super  sal" */
+   color: #ffffff;
+   font-size: 22px;
+   font-weight: 400;
+   text-transform: uppercase;
+   /* Text style for "S, uper  ," */
+   letter-spacing: 0.55px;
+   position: absolute;
+   right: 31px;
+   bottom: 31px;
+}
+
+.menu__drop {
+   display: none;
+   height: 310px;
+   width: 846px;
+}
+
+
+
+.search__drop {
+   display: flex;
+   position: absolute;
+    top: 40px;
+    left: 0px;
+}
+
+.menu:hover .menu__drop {
+   display: flex;
+   position: absolute;
 }
