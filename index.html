@@ -21,10 +21,8 @@
             </a>
             <form action="#" class="header__form">
                <div class="search__browse div_flex">
-                  <span>Browse</span>
+                  <span>Browse</span> <!-- Выпадающее меню на Browse -->
                   <span class="browse__fa_caret"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
-                  <!-- Выпадающее меню на Browse -->
-                  <img class="browse__drop_arrow" src="img/Drop_shape.svg" alt="">
                   <div class="drop search__drop">
                      <div class="dropflex">
                         <div class="drop__h3">Women</div>
@@ -63,6 +61,19 @@
             <a href="#">
                <img src="img\Cart.svg" alt="cart" class="cart__img">
             </a>
+            <div class="drop drop__cart">
+               <div class="cart__product">
+                  <img src="img/Cart_img_1.jpg" alt="" class="cart__prod_img">
+                  <div class="cart__prod_title">Rebox Zane</div>
+                  <img src="img/stars5.jpg" alt="stars" class="cart__prod_stars">
+                  <div class="cart__prod_price">1&nbsp<span class="price_x">x</span>&nbsp$250</div>
+                  <i class="cart__prod_del fa fa-times-circle"></i>
+               </div>
+               <div class="cart__product"></div>
+               <div class="cart__total">TOTAL $500.00</div>
+               <a href="#" class="cart__check div_flex"><span>Checkout</span></a>
+               <a href="#" class="cart__goto div_flex"><span>Go to cart</span></a>
+            </div>
             <div class="my_account div_flex">
                <span>My Account</span>
                <span class="my_accont__fa_caret"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
@@ -77,7 +88,7 @@
          <li class="menu__list"><a href="" class="menu__link">Man</a></li>
          <li class="menu__list">
             <a href="" class="menu__link">Women</a>
-            <!-- Выпадающее меню, завязанное на один из menu link -->
+            <!-- Выпадающее меню, завязанное на "Women" menu link -->
             <div class="drop menu__drop">
                <div class="dropflex">
                   <div class="drop__h3">Women</div>

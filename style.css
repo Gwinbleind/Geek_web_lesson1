@@ -51,6 +51,7 @@ body {
 
 .container__right {
    margin-right: 231px;
+   position: relative;
 }
 
 .logo {
@@ -724,6 +725,26 @@ body {
    /* Style for "Background" */
    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
    border: 1px solid #e9e9e9;
+   position: relative;
+   z-index: 1;
+}
+
+.drop::before {
+   top: -18px;
+   left: 63px;
+   content: '';
+   border: 9px solid transparent;
+   border-bottom: 9px solid #e9e9e9;
+   position: absolute;	
+}
+
+.drop::after {
+   top: -14px;
+   left: 65px;
+   content: '';
+   border: 7px solid transparent;
+   border-bottom: 7px solid #ffffff;
+   position: absolute;   
 }
 
 .menu__list {
@@ -790,8 +811,18 @@ body {
    display: none;
    height: 310px;
    width: 846px;
-    top: 53px;
-    left: -3px;
+   top: 53px;
+   left: -3px;
+}
+
+.menu__drop::before {
+    top: -18px;
+    left: 60px;	
+}
+
+.menu__drop::after {
+    top: -14px;
+    left: 62px;	
 }
 
 
@@ -800,10 +831,19 @@ body {
    display: none;
    position: absolute;
    top: 36px;
-      left: -1px;
-   z-index: 1;
+   left: -1px;
    height: 560px;
-}   
+}
+
+.search__drop::after {
+   top: -14px;
+   left: 65px;
+}
+
+.search__drop::before {
+   top: -18px;
+   left: 63px;
+}
 
 .search__browse:hover .search__drop {
    display: flex;
@@ -815,15 +855,97 @@ body {
 }
 
 .menu__drop_last {
-    left: unset;
-    right: -470px;
+   left: unset;
+   right: -470px;
+}
+
+.menu__drop_last::before {
+   left: 351px;
+}
+
+.menu__drop_last::after {
+   left: 353px;
 }
 
 .browse__drop_arrow {
    position: absolute;
-   top: 30px;
-   left: 66px;
    z-index: 2;
    /* Style for "Shape 3" */
+   /*background-color: #ffffff;*/
+
+   top: -6px;
+   left: 67px;
+}
+
+.drop__cart {
+   position: absolute;
+    top: 45px;
+    left: -14px;   
+   margin: 20px;
+}
+
+.cart__goto {
+   /* Style for "Go to cart" */
+color: #4a4a4a;
+font-size: 14px;
+font-weight: 700;
+text-transform: uppercase;
+   /* Style for "Rectangle" */
+border: 1px solid #eaeaea;
 background-color: #ffffff;
+   width: 225px;
+   height: 50px;
+}
+
+.cart__check {
+   /* Style for "Checkout" */
+color: #f16d7f;
+font-size: 14px;
+font-weight: 700;
+text-transform: uppercase;
+   border: 1px solid #f16d7f;
+   width: 225px;
+   height: 50px;
+}
+
+.cart__total {
+   /* Style for "TOTAL" */
+color: #222222;
+font-size: 16px;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.cart__prod_title {
+   /* Style for "Rebox Zane" */
+color: #222222;
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.cart__prod_price {
+   /* Style for "1  x   $25" */
+color: #f16d7f;
+font-size: 12px;
+font-weight: 400;
+text-transform: uppercase;
+}
+
+.price_x {   
+/* Text style for "x" */
+font-size: 10px;
+}
+
+.cart__prod_del {
+   /* Style for "" */
+color: #c0c0c0;
+font-size: 16px;
+font-weight: 400;
+text-transform: uppercase;
+}
+
+.cart__product {
+   width: 230px;
+   height: 102px;
 }
