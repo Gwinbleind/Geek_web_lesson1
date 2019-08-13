@@ -987,3 +987,223 @@ body {
 .cart__container {
    text-decoration: none;
 }
+
+.new_arr {
+   background-color: #f8f3f4;
+   width: 100%;
+}
+
+.new__flex {
+   background-color: #f8f3f4;
+   display: flex;
+   padding-top: 65px;
+   padding-bottom: 65px;
+   padding-left: 230px;
+   padding-right: 230px;
+   justify-content: space-between;
+}
+
+.new_left {
+   /* Style for "New Arriva" */
+   color: #f16d7f;
+   font-size: 24px;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+
+.new_right {
+   /* Style for "Home / Men" */
+   font-size: 14px;
+   text-transform: uppercase;
+   /* Text style for "Home / Men" */
+   color: #636363;
+   font-weight: 300;
+}
+
+.new_right_active {
+   /* Text style for "New Arriva" */
+   color: #f16d7f;
+   font-weight: 700;
+   font-weight: 700;
+}
+
+.carousel {
+   /* Style for "Rectangle" */
+   border: 1px solid #eaeaea;
+   background-color: #f7f7f7;
+   position: relative;
+   justify-content: space-between;
+   padding-top: 11px;
+   margin-bottom: 763px;
+}
+
+.carousel__arrow {
+   background-color: #2a2a2a;
+   /* Style for "" */
+   color: #ffffff;
+   font-size: 24px;
+   font-weight: 400;
+   filter: opacity(50%);
+   height: 47px;
+   width: 47px;
+}
+
+.carousel__description {
+   position: absolute;
+   top: 690px;
+   left: 230px;
+   width: 1140px;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   align-items: center;
+   /* Style for "Background" */
+   border: 1px solid #eaeaea;
+   background-color: #ffffff;
+   padding-top: 73px;
+   padding-bottom: 122px;
+   z-index: 1;
+}
+
+.prod__collection {
+   /* Style for "WOMEN COLL" */
+   color: #f16d7f;
+   font-size: 14px;
+   font-weight: 700;
+   text-transform: uppercase;
+   margin-bottom: 34px;
+}
+
+.prod__name {
+   /* Style for "Moschino C" */
+   color: #4d4d4d;
+   font-size: 18px;
+   font-weight: 400;
+   text-transform: uppercase;
+   margin-bottom: 67px;
+}
+
+.prod__text {
+   /* Style for "Compelling" */
+   color: #5e5e5e;
+   font-size: 14px;
+   font-weight: 300;
+   width: 618px;
+   margin-bottom: 28px;
+   text-align: center;
+}
+
+.prod__properties {
+   display: flex;
+   justify-content: space-between;
+   width: 334px;
+   margin-bottom: 37px;
+}
+
+.prop__prop {
+   /* Style for "MATERIAL:" */
+   color: #b9b9b9;
+   font-size: 14px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+.prop__value {
+   /* Text style for "COTTON" */
+   color: #2f2f2f;
+}
+
+.prod__price {
+   /* Style for "$561" */
+   color: #ef5b70;
+   font-size: 24px;
+   font-weight: 700;
+   padding-bottom: 43px;
+   border-bottom: 1px solid #eaeaea;
+   width: 642px;
+   text-align: center;
+   margin-bottom: 63px;
+}
+
+.prod__choose {
+   width: 538px;
+   display: flex;
+   justify-content: space-between;
+   /* Style for "CHOOSE COL" */
+   color: #2f2f2f;
+   font-size: 14px;
+   font-weight: 700;
+   text-transform: uppercase;
+   margin-bottom: 28px;
+}
+
+.choose__color_sign {
+   width: 12px;
+   height: 12px;
+   margin-right: 11px;
+   background-color: #ef5b70;
+}
+
+.choose__box {
+   width: 118px;
+   height: 33px;
+   /* Style for "Rectangle" */
+   border: 1px solid #eaeaea;
+   background-color: #ffffff;
+   /* Style for "Red" */
+   color: #bcbcbc;
+   font-size: 13px;
+   font-weight: 400;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 15px;
+   padding-right: 9px;
+}
+
+.choose__container {
+   width: 144px;
+   height: 61px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.choose__dropsign {
+   font-size: 14px;
+}
+
+.prod__add {
+   /* Style for "Rectangle" */
+   border: 1px solid #ef5b70;
+   background-color: #ffffff;
+   /* Style for "Add to Car" */
+   color: #ef5b70;
+   font-size: 16px;
+   font-weight: 700;
+   width: 537px;
+   height: 55px;
+}
+
+.cart__img_red {
+   margin-right: 15px;
+}
+
+.cart__img_red svg {
+   fill: #ef5b70;
+}
+
+.also__header {
+   /* Style for "you may li" */
+color: #4d4d4d;
+font-size: 24px;
+font-weight: 400;
+text-transform: uppercase;
+}
+
+.also {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 34px;
+}
