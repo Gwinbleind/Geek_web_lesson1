@@ -329,6 +329,10 @@ body {
   margin-left: 14px;
   margin-top: 20px;
 }
+.product__name_cart {
+  margin-left: 21px;
+  margin-top: 13px;
+}
 
 .product__price {
   color: #f16d7f;
@@ -338,6 +342,15 @@ body {
   margin-left: 14px;
   margin-top: 17px;
   margin-bottom: 21px;
+}
+
+.product__prop {
+  margin-left: 21px;
+  margin-top: 38px;
+}
+.product__prop_value {
+  color: #6f6e6e;
+  font-weight: 300;
 }
 
 .feature {
