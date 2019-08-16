@@ -2,8 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-<<<<<<< Updated upstream
-=======
 }
 
 a {
@@ -1193,7 +1191,6 @@ body {
 }
 .shop_table__details {
   width: 510px;
->>>>>>> Stashed changes
 }
 .shop_table__action {
   width: 50px;
@@ -1206,6 +1203,14 @@ body {
   letter-spacing: -0.2px;
   font-weight: 700;
   display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+.shop_table__prodline {
+  display: flex;
+}
+.shop_table__details {
+  height: 115px;
 }
 
 /*# sourceMappingURL=style.css.map */
