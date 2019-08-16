@@ -268,7 +268,7 @@
          </div>
          <div class="form__box">
             <form id="shipping form" action="" class="shipping_form">
-               <div class="shipping_form__h">Shipping Adress</div>
+               <div class="shipping_form__h1">Shipping Adress</div>
                <select class="choose__box choose__box_ship" name="country" id="choose country" form="shipping form">
                   <option value="1">Bangladesh</option>
                   <option value="2">USA</option>
@@ -278,10 +278,27 @@
                </select>
                <input class="choose__box choose__box_ship" type="text" form="shipping form" id="choose State" placeholder="State">
                <input class="choose__box choose__box_ship" type="text" form="shipping form" id="choose ZIP" placeholder="Postcode / Zip">
-               <input class="button_goto button_goto_coupon" type="submit" value="get a quote">
+               <input class="button_goto button_goto_quote" type="submit" value="get a quote">
             </form>
-            <form action="" class="coupon_form"></form>
-            <form action="" class="checkout_form"></form>
+            <form id="coupon form" action="" class="shipping_form">
+               <div class="shipping_form__h1">coupon  discount</div>
+               <div class="shipping_form__h2">Enter your coupon code if you have one</div>
+               <input class="choose__box choose__box_ship" type="text" form="coupon form" id="choose State" placeholder="State">
+               <input class="button_goto button_goto_coupon" type="submit" value="Apply coupon">
+            </form>
+            <form id="checkout form" action="" class="checkout_form">
+               <div class="checkout_form__h2">
+                  Sub total
+                  <div style="width: 20px; height: 10px"></div>
+                  $900
+               </div>
+               <div class="checkout_form__h1">
+                  GRAND TOTAL
+                  <div style="width: 20px; height: 10px"></div>
+                  <span class="checkout_form__h1_active">$900</span>
+               </div>
+               <div class="checkout_form__submit div_flex">proceed to checkout</div>
+            </form>
          </div>
       </div>
    </div>
@@ -356,4 +373,3 @@
 </body>
 
 </html>
-анна георгий

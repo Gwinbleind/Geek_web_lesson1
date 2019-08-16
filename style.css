@@ -299,12 +299,11 @@ body {
   letter-spacing: 0.75px;
 }
 
-.products__button {
+.products__button, .checkout_form__submit {
   background-color: #f16d7f;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
-  /*line-height: 54px*/
   letter-spacing: 0.4px;
   width: 212px;
   height: 48px;
@@ -499,6 +498,7 @@ body {
 
 .form__box {
   margin-top: 63px;
+  margin-bottom: 79px;
   display: flex;
 }
 .form__email {
@@ -929,7 +929,7 @@ body {
   margin-bottom: 11px;
 }
 
-.cart__total, .shipping_form__h {
+.cart__total, .shipping_form__h1 {
   display: flex;
   justify-content: space-between;
   /* Style for "TOTAL" */
@@ -1186,6 +1186,8 @@ body {
 }
 .choose__box_ship {
   margin-bottom: 20px;
+  width: 335px;
+  box-sizing: border-box;
 }
 
 .choose__container {
@@ -1235,10 +1237,10 @@ body {
 }
 
 .shop_table {
+  margin-top: 90px;
   /* Style for "Product De" */
   color: #222222;
   font-size: 13px;
-  text-transform: uppercase;
   /* Text style for "P, roduct" */
 }
 .shop_table__flex {
@@ -1254,14 +1256,17 @@ body {
   width: 145px;
 }
 .shop_table__header {
+  text-transform: uppercase;
   height: 12px;
   letter-spacing: -0.2px;
   font-weight: 700;
   display: flex;
   padding-bottom: 20px;
   border-bottom: 1px solid #eaeaea;
+  margin-bottom: 22px;
 }
 .shop_table__prodline {
+  text-transform: uppercase;
   display: flex;
   padding-bottom: 25px;
   margin-bottom: 26px;
@@ -1271,14 +1276,61 @@ body {
   height: 115px;
 }
 
-.shipping_form__h {
+.shipping_form {
+  margin-right: 35px;
+}
+.shipping_form__h1 {
   margin-bottom: 22px;
+}
+.shipping_form__h2 {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 24px;
 }
 .shipping_form__box {
   margin-bottom: 20px;
 }
 .shipping_form__submit {
   margin-top: 5px;
+}
+
+.checkout_form {
+  padding: 40px;
+  background-color: #f5f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.checkout_form__h1 {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 22px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #e2e2e2;
+  width: 275px;
+  display: flex;
+  justify-content: flex-end;
+}
+.checkout_form__h1_active {
+  color: #f16d7f;
+}
+.checkout_form__h2 {
+  color: #4a4a4a;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  width: 275px;
+  display: flex;
+  justify-content: flex-end;
+}
+.checkout_form__submit {
+  text-transform: uppercase;
+  width: 273px;
+  height: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
