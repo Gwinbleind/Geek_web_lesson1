@@ -146,11 +146,14 @@ body {
 }
 
 .promo__back {
-  background: url(img/Promo_img.png) no-repeat 0 -50px;
   height: 100%;
   width: 100%;
   margin-left: 230px;
   justify-content: flex-start;
+}
+
+.promo__back {
+  background: url(img/Promo_img.png) no-repeat 0 -50px;
 }
 
 .promo__text {
@@ -186,9 +189,12 @@ body {
 }
 
 .category__women {
-  background-image: url(img/Categoty_img_women.png);
   width: 560px;
   height: 261px;
+}
+
+.category__women {
+  background-image: url(img/Categoty_img_women.png);
 }
 
 .category__kids {
@@ -886,7 +892,7 @@ body {
   left: 26px;
 }
 
-.cart__goto {
+.button_goto {
   /* Style for "Go to cart" */
   color: #4a4a4a;
   font-size: 14px;
@@ -897,6 +903,16 @@ body {
   background-color: #ffffff;
   width: 225px;
   height: 50px;
+}
+.button_goto_quote {
+  width: 100px;
+  height: 35px;
+  font-size: 11px;
+}
+.button_goto_coupon {
+  width: 118px;
+  height: 35px;
+  font-size: 11px;
 }
 
 .cart__check {
@@ -911,7 +927,7 @@ body {
   margin-bottom: 11px;
 }
 
-.cart__total {
+.cart__total, .shipping_form__h {
   display: flex;
   justify-content: space-between;
   /* Style for "TOTAL" */
@@ -1129,7 +1145,7 @@ body {
   background-color: #ef5b70;
 }
 
-.choose__box {
+.choose__box, .shipping_form__box {
   width: 118px;
   height: 33px;
   /* Style for "Rectangle" */
@@ -1144,6 +1160,18 @@ body {
   justify-content: space-between;
   padding-left: 15px;
   padding-right: 9px;
+}
+.choose__box_cart {
+  width: 54px;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+}
+.choose__box_cart::-webkit-outer-spin-button, .choose__box_cart::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .choose__container {
@@ -1221,9 +1249,22 @@ body {
 }
 .shop_table__prodline {
   display: flex;
+  padding-bottom: 25px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #eaeaea;
 }
 .shop_table__details {
   height: 115px;
+}
+
+.shipping_form__h {
+  margin-bottom: 22px;
+}
+.shipping_form__box {
+  margin-bottom: 20px;
+}
+.shipping_form__submit {
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

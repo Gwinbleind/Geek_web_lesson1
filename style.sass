@@ -124,11 +124,13 @@ body
    color: #f16d7f
 
 .promo__back
-   background: url(img/Promo_img.png) no-repeat 0 -50px
    height: 100%
    width: 100%
    margin-left: 230px
    justify-content: flex-start
+
+.promo__back
+   background: url(img/Promo_img.png) no-repeat 0 -50px
 
 .promo__text
    color: #222222
@@ -158,9 +160,11 @@ body
    height: 542px
 
 .category__women
-   background-image: url(img/Categoty_img_women.png)
    width: 560px
    height: 261px
+
+.category__women
+   background-image: url(img/Categoty_img_women.png)
 
 .category__kids
    background-image: url(img/Categoty_img_kids.png)
@@ -762,7 +766,7 @@ body
 .drop__cart::before
    left: 26px
 
-.cart__goto
+.button_goto
    /* Style for "Go to cart" */
    color: #4a4a4a
    font-size: 14px
@@ -773,6 +777,14 @@ body
    background-color: #ffffff
    width: 225px
    height: 50px
+   &_quote
+      width: 100px
+      height: 35px
+      font-size: 11px
+   &_coupon
+      width: 118px
+      height: 35px
+      font-size: 11px
 
 .cart__check
    /* Style for "Checkout" */
@@ -993,6 +1005,18 @@ body
    justify-content: space-between
    padding-left: 15px
    padding-right: 9px
+   &_cart
+      width: 54px
+      height: 30px
+      padding: 0
+      text-align: center
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+         /* display: none; <- Crashes Chrome on hover */
+         -webkit-appearance: none
+         margin: 0
+         /* <-- Apparently some margin are still there even though it's hidden */
+
 
 .choose__container
    width: 144px
@@ -1056,5 +1080,18 @@ body
       border-bottom: 1px solid #eaeaea
    &__prodline
       display: flex
+      padding-bottom: 25px
+      margin-bottom: 26px
+      border-bottom: 1px solid #eaeaea
    &__details
       height: 115px
+
+.shipping_form
+   &__h
+      @extend .cart__total
+      margin-bottom: 22px
+   &__box
+      @extend .choose__box
+      margin-bottom: 20px
+   &__submit
+      margin-top: 5px

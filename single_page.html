@@ -198,92 +198,104 @@
       <span class="new_left">New Arrivals </span>
       <span class="new_right">Home / Men / <span class="new_right_active">New Arrivals</span></span>
    </div>
-   <div class="shop_table div_flex">
-      <div class="shop_table__flex">
-         <div class="shop_table__header">
-            <div class="shop_table__details">product details</div>
-            <div class="shop_table__property div_flex">unite price</div>
-            <div class="shop_table__property div_flex">quantity</div>
-            <div class="shop_table__property div_flex">shipping</div>
-            <div class="shop_table__property div_flex">subtotal</div>
-            <div class="shop_table__action div_flex">action</div>
+   <div class="carousel div_flex">
+      <div class="carousel__arrow div_flex"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+      <img src="img/Single_img_mochino.png" alt="">
+      <div class="carousel__arrow div_flex"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+      <div class="carousel__description">
+         <div class="prod__collection">WOMEN COLLECTION</div>
+         <div class="prod__name">Moschino Cheap And Chic</div>
+         <div class="prod__text">
+            Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.
          </div>
-         <div class="shop_table__prodline">
-            <div class="shop_table__details div_colwrap">
-               <img src="img/Product_9.jpg" alt="">
-               <div class="product__name product__name_cart">Mango People T-shirt</div>
-               <div class="product__prop">
-                  Color: <span class="product__prop_value">Red</span>
-                  <br>
-                  Size: <span class="product__prop_value">Xll</span>
+         <div class="prod__properties">
+            <div class="prop__prop">MATERIAL: <span class="prop__value">COTTON</span></div>
+            <div class="prop__prop">DESIGNER: <span class="prop__value">BINBURHAN</span></div>
+         </div>
+         <div class="prod__price">$561</div>
+         <div class="prod__choose">
+            <div class="choose__container">
+               <span>CHOOSE COLOR</span>
+               <!-- Old choose box
+                 <div class="choose__box">
+                  <div class="choose__content div_flex">
+                     <div class="choose__color_sign"></div>
+                     <span>Red</span>
+                  </div>
+                  <div class="choose__dropsign"><i class="fa fa-chevron-down"></i></div>
                </div>
-            </div>
-            <div class="shop_table__property div_flex">$150</div>
-            <div class="shop_table__property div_flex">
-               <input class="choose__box choose__box_cart" value="2" type="number" min="1">
-            </div>
-            <div class="shop_table__property div_flex">FREE</div>
-            <div class="shop_table__property div_flex">$300</div>
-            <div class="shop_table__action div_flex"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-         </div>
-         <div class="shop_table__prodline">
-            <div class="shop_table__details div_colwrap">
-               <img src="img/Product_10.jpg" alt="">
-               <div class="product__name product__name_cart">Mango People T-shirt</div>
-               <div class="product__prop">
-                  Color: <span class="product__prop_value">Red</span>
-                  <br>
-                  Size: <span class="product__prop_value">Xll</span>
-               </div>
-            </div>
-            <div class="shop_table__property div_flex">$150</div>
-            <div class="shop_table__property div_flex">
-               <input class="choose__box choose__box_cart" value="2" type="number" min="1">
-            </div>
-            <div class="shop_table__property div_flex">FREE</div>
-            <div class="shop_table__property div_flex">$300</div>
-            <div class="shop_table__action div_flex"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-         </div>
-         <div class="shop_table__prodline">
-            <div class="shop_table__details div_colwrap">
-               <img src="img/Product_11.jpg" alt="">
-               <div class="product__name product__name_cart">Mango People T-shirt</div>
-               <div class="product__prop">
-                  Color: <span class="product__prop_value">Red</span>
-                  <br>
-                  Size: <span class="product__prop_value">Xll</span>
-               </div>
-            </div>
-            <div class="shop_table__property div_flex">$150</div>
-            <div class="shop_table__property div_flex">
-               <input class="choose__box choose__box_cart" value="2" type="number" min="1">
-            </div>
-            <div class="shop_table__property div_flex">FREE</div>
-            <div class="shop_table__property div_flex">$300</div>
-            <div class="shop_table__action div_flex"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-         </div>
-         <div class="header_flex">
-            <div class="button_goto div_flex">Clear shopping cart</div>
-            <div class="button_goto div_flex">Continue Shopping</div>
-         </div>
-         <div>
-            <form action="" class="shipping_form">
-               <div class="shipping_form__h">Shipping Adress</div>
-               <select class="shipping_form__box" name="country" id="choose country" form="">
-                  <option value="1">Bangladesh</option>
-                  <option value="2">USA</option>
-                  <option value="3">United Kingdom</option>
-                  <option value="4">Gonduras</option>
-                  <option value="5">Russian Federation</option>
+                 -->
+               <select class="choose__box" name="color" id="choose color" form="Add to Cart">
+                  <option value="0">White</option>
+                  <option value="1">Red</option>
+                  <option value="2">Black</option>
                </select>
-               <input class="shipping_form__box" type="text" form="" id="choose State" placeholder="State">
-               <input class="shipping_form__box" type="text" form="" id="choose ZIP" placeholder="Postcode / Zip">
-               <input class="button_goto button_goto_coupon" type="submit" value="get a quote">
-            </form>
-            <form action="" class="coupon_form"></form>
-            <form action="" class="checkout_form"></form>
+            </div>
+            <div class="choose__container">
+               <span>CHOOSE SIZE</span>
+               <select class="choose__box" name="size" id="choose size" form="Add to Cart">
+                  <option value="1">M</option>
+                  <option value="2">S</option>
+                  <option value="3">L</option>
+                  <option value="4">XL</option>
+                  <option value="5">XXL</option>
+               </select>
+            </div>
+            <div class="choose__container">
+               <span>QUANTITY</span>
+               <input class="choose__box" value="2" type="number" min="1" form="Add to Cart" id="choose quantity">
+            </div>
          </div>
+         <form id="Add to Cart">
+            <button class="prod__add div_flex" type="submit">
+               <img class="cart__img_red" src="img/Cart_red.svg">
+               <span>Add to Cart</span>
+            </button>
+         </form>
       </div>
+   </div>
+   <div class="also">
+      <header class="also__header">you may like also</header>
+      <nav class="div_flex">
+         <div class="products__box div_flex">
+            <div class="product__element">
+               <a href="" class="product__content">
+                  <img class="product__img" src="img/Also_img_1.jpg" alt="">
+                  <div class="product__name">Mango People T-shirt</div>
+                  <div class="product__price">$52.00</div>
+               </a>
+               <a href="#" class="product__add">Add to Cart</a>
+               <img src="img/stars5.jpg" alt="stars" class="product__stars">
+            </div>
+            <div class="product__element">
+               <a href="" class="product__content">
+                  <img src="img/Also_img_2.jpg" alt="" class="product__img">
+                  <div class="product__name">Mango People T-shirt</div>
+                  <div class="product__price">$52.00</div>
+               </a>
+               <a href="" class="product__add">Add to Cart</a>
+               <img src="img/stars5.jpg" alt="stars" class="product__stars">
+            </div>
+            <div class="product__element">
+               <a href="" class="product__content">
+                  <img src="img/Also_img_3.jpg" alt="" class="product__img">
+                  <div class="product__name">Mango People T-shirt</div>
+                  <div class="product__price">$52.00</div>
+               </a>
+               <a href="" class="product__add">Add to Cart</a>
+               <img src="img/stars5.jpg" alt="stars" class="product__stars">
+            </div>
+            <div class="product__element">
+               <a href="" class="product__content">
+                  <img src="img/Also_img_4.jpg" alt="" class="product__img">
+                  <div class="product__name">Mango People T-shirt</div>
+                  <div class="product__price">$52.00</div>
+               </a>
+               <a href="" class="product__add">Add to Cart</a>
+               <img src="img/stars5.jpg" alt="stars" class="product__stars">
+            </div>
+         </div>
+      </nav>
    </div>
    <div class="subscribe div_flex">
       <div class="subscribe__back div_flex">
@@ -356,4 +368,3 @@
 </body>
 
 </html>
-анна георгий
