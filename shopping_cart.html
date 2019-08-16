@@ -266,18 +266,18 @@
             <div class="button_goto div_flex">Clear shopping cart</div>
             <div class="button_goto div_flex">Continue Shopping</div>
          </div>
-         <div>
-            <form action="" class="shipping_form">
+         <div class="form__box">
+            <form id="shipping form" action="" class="shipping_form">
                <div class="shipping_form__h">Shipping Adress</div>
-               <select class="shipping_form__box" name="country" id="choose country" form="">
+               <select class="choose__box choose__box_ship" name="country" id="choose country" form="shipping form">
                   <option value="1">Bangladesh</option>
                   <option value="2">USA</option>
                   <option value="3">United Kingdom</option>
                   <option value="4">Gonduras</option>
                   <option value="5">Russian Federation</option>
                </select>
-               <input class="shipping_form__box" type="text" form="" id="choose State" placeholder="State">
-               <input class="shipping_form__box" type="text" form="" id="choose ZIP" placeholder="Postcode / Zip">
+               <input class="choose__box choose__box_ship" type="text" form="shipping form" id="choose State" placeholder="State">
+               <input class="choose__box choose__box_ship" type="text" form="shipping form" id="choose ZIP" placeholder="Postcode / Zip">
                <input class="button_goto button_goto_coupon" type="submit" value="get a quote">
             </form>
             <form action="" class="coupon_form"></form>

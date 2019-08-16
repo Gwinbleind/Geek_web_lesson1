@@ -497,6 +497,10 @@ body {
   align-items: flex-start;
 }
 
+.form__box {
+  margin-top: 63px;
+  display: flex;
+}
 .form__email {
   border-radius: 23px 0 0 23px;
   background-color: #e1e1e1;
@@ -512,7 +516,6 @@ body {
   /* Text style for "E, nter Yo" */
   letter-spacing: 0.35px;
 }
-
 .form__button {
   color: #ffffff;
   font-size: 14px;
@@ -525,13 +528,6 @@ body {
   height: 46px;
   border: none;
 }
-
-.sub__form {
-  flex-wrap: wrap;
-  margin-top: 148px;
-  margin-left: 92px;
-}
-
 .form__header {
   width: 100%;
   text-align: center;
@@ -539,6 +535,12 @@ body {
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 35px;
+}
+
+.sub__form {
+  flex-wrap: wrap;
+  margin-top: 148px;
+  margin-left: 92px;
 }
 
 .test_area {
@@ -1161,6 +1163,15 @@ body {
   padding-left: 15px;
   padding-right: 9px;
 }
+.choose__box::-webkit-input-placeholder, .shipping_form__box::-webkit-input-placeholder {
+  color: #b1b1b1;
+}
+.choose__box::-moz-placeholder, .shipping_form__box::-moz-placeholder {
+  color: #b1b1b1;
+}
+.choose__box:-ms-input-placeholder, .shipping_form__box:-ms-input-placeholder {
+  color: #b1b1b1;
+}
 .choose__box_cart {
   width: 54px;
   height: 30px;
@@ -1172,6 +1183,9 @@ body {
   -webkit-appearance: none;
   margin: 0;
   /* <-- Apparently some margin are still there even though it's hidden */
+}
+.choose__box_ship {
+  margin-bottom: 20px;
 }
 
 .choose__container {
