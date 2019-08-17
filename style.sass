@@ -67,21 +67,21 @@ body
    /*line-height: 32px*/
    text-transform: uppercase
    margin-right: 37px
-
-.logo_1
-   font-weight: 300
-   letter-spacing: 0.68px
-
-.logo_2
-   color: #f16d7f
-   font-weight: 400
-   letter-spacing: 0.68px
+   transition: all 0.3s
+   &:hover
+      transform: rotate(0.5turn)
+   &_1
+      font-weight: 300
+      letter-spacing: 0.68px
+   &_2
+      color: #f16d7f
+      font-weight: 400
+      letter-spacing: 0.68px
+   &__img
+      margin-right: 13px
 
 .header__form
    display: flex
-
-.logo__img
-   margin-right: 13px
 
 .cart__img
    margin-right: 26px
@@ -113,93 +113,81 @@ body
    justify-content: center
    list-style: none
 
-.promo__text-big
-   font-size: 60px
-   letter-spacing: 1.5px
-
-.min
-   letter-spacing: 1px
-
-.promo__text-red
-   color: #f16d7f
-
-.promo__back
-   height: 100%
-   width: 100%
-   margin-left: 230px
-   justify-content: flex-start
-
-.promo__back
-   background: url(img/Promo_img.png) no-repeat 0 -50px
-
-.promo__text
-   color: #222222
-   font-size: 40px
-   font-weight: 400
-   text-transform: uppercase
-
-.promo__line
-   height: 92px
-   width: 12px
-   background-color: #f16d7f
-   margin-right: 12px
-
 .promo
    background-color: #e8e8e8
    height: 613px
+   &__back
+      height: 100%
+      width: 100%
+      margin-left: 230px
+      justify-content: flex-start
+      background: url(img/Promo_img.png) no-repeat 0 -50px
+   &__line
+      height: 92px
+      width: 12px
+      background-color: #f16d7f
+      margin-right: 12px
+   &__text
+      color: #222222
+      font-size: 40px
+      font-weight: 400
+      text-transform: uppercase
+      transition: all 2s cubic-bezier(0,.65,1,.3)
+      &:hover
+         transform: translateX(14%) scale(1.3,0.7)
+      &_min
+         letter-spacing: 1px
+      &_big
+         font-size: 60px
+         letter-spacing: 1.5px
+      &_red
+         color: #f16d7f
 
 .category
-   flex-direction: column
-   flex-wrap: wrap
-   width: 1160px
-   height: 843px
-
-.category__men
-   background-image: url(img/Categoty_img_men.png)
-   width: 560px
-   height: 542px
-
-.category__women
-   width: 560px
-   height: 261px
-
-.category__women
-   background-image: url(img/Categoty_img_women.png)
-
-.category__kids
-   background-image: url(img/Categoty_img_kids.png)
-   width: 560px
-   height: 542px
-
-.category__accesories
-   background-image: url(img/Categoty_img_acc.png)
-   width: 560px
-   height: 261px
-
-.category__margin
-   margin: 10px
-   display: flex
-   align-items: flex-start
-
-.categoties
    margin-top: 88px
-
-.category__name
-   background-color: #ffffff
-   margin-top: 26px
-   padding: 16px 19px
-   color: #222222
-   font-size: 18px
-   font-weight: 400
-   text-transform: uppercase
-
-.category__name_1
-   letter-spacing: 0.45px
-
-.category__name_2
-   color: #f16d7f
-   font-size: 30px
-   letter-spacing: 0.75px
+   &_flex
+      flex-direction: column
+      flex-wrap: wrap
+      width: 1160px
+      height: 843px
+   &__men
+      background-image: url(img/Categoty_img_men.png)
+      width: 560px
+      height: 542px
+   &__women
+      width: 560px
+      height: 261px
+   &__women
+      background-image: url(img/Categoty_img_women.png)
+   &__kids
+      background-image: url(img/Categoty_img_kids.png)
+      width: 560px
+      height: 542px
+   &__accesories
+      background-image: url(img/Categoty_img_acc.png)
+      width: 560px
+      height: 261px
+   &__margin
+      margin: 10px
+      display: flex
+      align-items: flex-start
+      &:hover .category__name
+         transform: translate(25%) scale(1.3)
+   &__name
+      background-color: #ffffff
+      margin-top: 26px
+      padding: 16px 19px
+      color: #222222
+      font-size: 18px
+      font-weight: 400
+      text-transform: uppercase
+      transition: all 2s
+      &_1
+         letter-spacing: 0.45px
+      &_2
+         color: #f16d7f
+         font-size: 30px
+         letter-spacing: 0.75px
 
 .product__element
    display: block
@@ -239,6 +227,10 @@ body
 .product__element:hover .product__add
    display: flex
 
+.products
+   flex-direction: column
+   margin-top: 100px
+
 .products__h2
    color: #9f9f9f
    font-size: 14px
@@ -267,10 +259,6 @@ body
    width: 1139px
    justify-content: space-between
    margin-top: 60px
-
-.products
-   flex-direction: column
-   margin-top: 100px
 
 .products__header
    flex-direction: column
@@ -304,6 +292,24 @@ body
 
 .feature
    margin-top: 113px
+   &__offer
+      background: no-repeat url(img/Feature_img.png)
+      width: 767px
+      height: 529px
+   &__text
+      margin-top: 146px
+      margin-left: 39px
+      color: #ffffff
+      font-weight: 700
+      text-transform: uppercase
+      &_1
+         font-size: 54px
+         letter-spacing: 1.5px
+      &_2
+         color: #f16d7f
+      &_3
+         font-size: 32px
+         letter-spacing: 0.9px
 
 .marketing
    width: 373px
@@ -313,62 +319,41 @@ body
    background-color: #222224
    flex-direction: column
    justify-content: space-around
-
-.feature__offer
-   background: no-repeat url(img/Feature_img.png)
-   width: 767px
-   height: 529px
-
-.feature__text
-   margin-top: 146px
-   margin-left: 39px
-   color: #ffffff
-   font-weight: 700
-   text-transform: uppercase
-
-.feature__text_1
-   font-size: 54px
-   letter-spacing: 1.5px
-
-.feature__text_2
-   color: #f16d7f
-
-.feature__text_3
-   font-size: 32px
-   letter-spacing: 0.9px
-
-.marketing__header
-   color: #fbfbfb
-   font-size: 20px
-   font-weight: 700
-   letter-spacing: 0.5px
-   position: absolute
-   top: 8px
-   left: 113px
-
-.marketing__text
-   color: #fbfbfb
-   font-size: 14px
-   font-weight: 300
-   /*line-height: 24px*/
-   letter-spacing: 0.35px
-   width: 219px
-   position: absolute
-   top: 42px
-   left: 111px
-
-.marketing__container
-   position: relative
-   width: 373px
-   height: 100px
-
-.marketing__img
-   position: absolute
-   left: 36px
+   &__header
+      color: #fbfbfb
+      font-size: 20px
+      font-weight: 700
+      letter-spacing: 0.5px
+      position: absolute
+      top: 8px
+      left: 113px
+   &__text
+      color: #fbfbfb
+      font-size: 14px
+      font-weight: 300
+      /*line-height: 24px*/
+      letter-spacing: 0.35px
+      width: 219px
+      position: absolute
+      top: 42px
+      left: 111px
+   &__container
+      position: relative
+      width: 373px
+      height: 100px
+   &__img
+      position: absolute
+      left: 36px
 
 .subscribe
    height: 438px
    width: 100%
+   &__back
+      background: no-repeat url(img/Sub_back.png)
+      width: 1600px
+      height: 100%
+      justify-content: flex-start
+      align-items: flex-start
 
 .story__text
    color: #222224
@@ -414,12 +399,6 @@ body
    margin-left: 113px
    margin-right: 370px
 
-.subscribe__back
-   background: no-repeat url(img/Sub_back.png)
-   width: 1600px
-   height: 100%
-   justify-content: flex-start
-   align-items: flex-start
 .form
    &__box
       margin-top: 63px
