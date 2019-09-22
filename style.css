@@ -326,9 +326,14 @@ body {
 }
 .products__box {
   flex-wrap: wrap;
-  width: 1139px;
   justify-content: space-between;
   margin-top: 60px;
+}
+.products__box_x3 {
+  width: 848px;
+}
+.products__box_x4 {
+  width: 1139px;
 }
 .products__header {
   flex-direction: column;
