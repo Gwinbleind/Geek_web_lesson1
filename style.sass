@@ -39,6 +39,11 @@ body
 
 .container
    width: 100%
+   display: flex
+   justify-content: center
+   align-items: center
+   &_horizontal
+      width: 1600px
    &__left
       margin-left: 235px
    &__right
@@ -56,7 +61,6 @@ body
    color: #222222
    font-size: 14px
    font-weight: 300
-   /*line-height: 32px*/
    letter-spacing: 0.35px
    position: relative
 
@@ -66,7 +70,6 @@ body
    color: #222222
    font-size: 27px
    font-weight: 300
-   /*line-height: 32px*/
    text-transform: uppercase
    margin-right: 37px
    transition: all 0.3s
@@ -92,7 +95,6 @@ body
    color: #ffffff
    font-size: 15px
    font-weight: 400
-   /*line-height: 32px*/
    height: 38px
    width: 130px
 
@@ -102,7 +104,6 @@ body
    color: #222222
    font-size: 14px
    font-weight: 700
-   /*line-height: 26px*/
    text-transform: uppercase
    text-decoration: none
 
@@ -188,106 +189,91 @@ body
          font-size: 30px
          letter-spacing: 0.75px
 
-.product__element
-   display: block
-   position: relative
-   width: 261px
-   margin-bottom: 39px
-
-.product__element:hover
-   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
-
-.product__element:hover .product__img
-   filter: brightness(50%)
-
-.product__stars
-   position: absolute
-   right: 1px
-   bottom: 1px
-
-.product__content
-   position: relative
-   display: block
-
-.product__add
-   position: absolute
-   top: 98px
-   left: 70px
-   display: none
-   align-items: center
-   justify-content: center
-   border: 1px solid #ffffff
-   color: #ffffff
-   font-size: 13px
-   font-weight: 700
-   width: 123px
-   height: 39px
-
-.product__element:hover .product__add
-   display: flex
+.product
+   &__element
+      display: block
+      position: relative
+      width: 261px
+      margin-bottom: 39px
+      &:hover
+         box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+         & .product__img
+            filter: brightness(50%)
+         & .product__add
+            display: flex
+   &__stars
+      position: absolute
+      right: 1px
+      bottom: 1px
+   &__content
+      position: relative
+      display: block
+   &__add
+      position: absolute
+      top: 98px
+      left: 70px
+      display: none
+      align-items: center
+      justify-content: center
+      border: 1px solid #ffffff
+      color: #ffffff
+      font-size: 13px
+      font-weight: 700
+      width: 123px
+      height: 39px
+   &__name
+      color: #222222
+      font-size: 13px
+      font-weight: 400
+      text-transform: uppercase
+      margin-left: 14px
+      margin-top: 20px
+      &_cart
+         margin-left: 21px
+         margin-top: 13px
+   &__price
+      color: #f16d7f
+      font-size: 16px
+      font-weight: 700
+      text-transform: uppercase
+      margin-left: 14px
+      margin-top: 17px
+      margin-bottom: 21px
+   &__prop
+      margin-left: 21px
+      margin-top: 38px
+      &_value
+         color: #6f6e6e
+         font-weight: 300
 
 .products
    flex-direction: column
    margin-top: 100px
-
-.products__h2
-   color: #9f9f9f
-   font-size: 14px
-   font-weight: 400
-   /*line-height: 54px*/
-   letter-spacing: 0.35px
-
-.products__h1
-   font-size: 30px
-   font-weight: 700
-   /*line-height: 54px*/
-   letter-spacing: 0.75px
-
-.products__button
-   background-color: #f16d7f
-   color: #ffffff
-   font-size: 16px
-   font-weight: 700
-   letter-spacing: 0.4px
-   width: 212px
-   height: 48px
-   text-align: center
-
-.products__box
-   flex-wrap: wrap
-   width: 1139px
-   justify-content: space-between
-   margin-top: 60px
-
-.products__header
-   flex-direction: column
-
-.product__name
-   color: #222222
-   font-size: 13px
-   font-weight: 400
-   text-transform: uppercase
-   margin-left: 14px
-   margin-top: 20px
-   &_cart
-      margin-left: 21px
-      margin-top: 13px
-
-.product__price
-   color: #f16d7f
-   font-size: 16px
-   font-weight: 700
-   text-transform: uppercase
-   margin-left: 14px
-   margin-top: 17px
-   margin-bottom: 21px
-
-.product__prop
-   margin-left: 21px
-   margin-top: 38px
-   &_value
-      color: #6f6e6e
-      font-weight: 300
+   &__h2
+      color: #9f9f9f
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: 0.35px
+   &__h1
+      font-size: 30px
+      font-weight: 700
+      letter-spacing: 0.75px
+   &__button
+      background-color: #f16d7f
+      color: #ffffff
+      font-size: 16px
+      font-weight: 700
+      letter-spacing: 0.4px
+      width: 212px
+      height: 48px
+      text-align: center
+   &__box
+      flex-wrap: wrap
+      width: 1139px
+      justify-content: space-between
+      margin-top: 60px
+   &__header
+      flex-direction: column
 
 .feature
    margin-top: 113px
@@ -318,7 +304,7 @@ body
    background-color: #222224
    flex-direction: column
    justify-content: space-around
-   &_full
+   &_mini
       width: 1600px
       height: 341px
       background-color: #222224
@@ -334,7 +320,6 @@ body
       color: #fbfbfb
       font-size: 14px
       font-weight: 300
-      /*line-height: 24px*/
       letter-spacing: 0.35px
       width: 219px
       position: absolute
@@ -352,7 +337,7 @@ body
    height: 438px
    width: 100%
    &__back
-      background: url(img/Sub_back_1.png) no-repeat, url(img/Sub_back_2.png) no-repeat
+      background: url(img/Sub_back_2.png) no-repeat 9px, url(img/Sub_back_1.png) no-repeat 9px
       width: 1618px
       height: 438px
       justify-content: flex-start
@@ -362,28 +347,23 @@ body
    color: #222224
    font-size: 16px
    font-style: italic
-   /*line-height: 26px*/
    letter-spacing: 0.4px
    margin-top: 5px
    margin-left: 28px
    width: 420px
 
 .story__name
-   /* Style for "Bin Burhan" */
    color: #f16d7f
    font-size: 16px
    font-weight: 700
-   /* Text style for "Bin Burhan" */
    letter-spacing: 0.4px
 /*line-height: 26px*/
 
 .story__city
-   /* Text style for "Dhaka, Bd" */
    color: #222224
    font-size: 12px
    font-weight: 300
    letter-spacing: 0.3px
-/*line-height: 14px*/
 
 .sub__story
    margin-top: 111px
@@ -414,18 +394,15 @@ body
       padding-left: 28px
       width: 254px
       border: none
-      /* Style for "Enter Your" */
       opacity: 0.67
       color: #222224
       font-size: 14px
       font-weight: 400
-      /* Text style for "E, nter Yo" */
       letter-spacing: 0.35px
    &__button
       color: #ffffff
       font-size: 14px
       font-weight: 400
-      /*line-height: 54px*/
       letter-spacing: 0.35px
       border-radius: 0 23px 23px 0
       background-color: #f16d7f
@@ -504,11 +481,9 @@ body
    margin-top: 41px
 
 .brand__text
-   /* Style for "Objectivel" */
    color: #898989
    font-size: 14px
    font-weight: 300
-   /* Text style for "Objectivel" */
    letter-spacing: 0.35px
    line-height: 24px
    margin-top: 29px
@@ -528,26 +503,21 @@ body
    font-weight: 700
    line-height: 26px
    text-transform: uppercase
-   /* Text style for "C, OMPANY" */
    letter-spacing: 0.45px
 
 .footer__category
-   /* Style for "COMPANY" */
    color: #f16d7f
    font-size: 18px
    font-weight: 700
    text-transform: uppercase
-   /* Text style for "C, OMPANY" */
    letter-spacing: 0.45px
    list-style: none
 
 .footer__link
    display: block
-   /* Style for "Home  Shop" */
    color: #898989
    font-size: 16px
    font-weight: 400
-   /* Text style for "Home" */
    letter-spacing: 0.4px
    text-transform: none
    margin-top: 23px
@@ -1051,10 +1021,8 @@ body
 
 .shop_table
    margin-top: 90px
-   /* Style for "Product De" */
    color: #222222
    font-size: 13px
-   /* Text style for "P, roduct" */
    &__flex
       width: $shop-table_width
    &__details
@@ -1101,13 +1069,11 @@ body
    padding: 40px
    background-color: #f5f3f3
    &__h1
-      // Style for "GRAND TOTA"
       color: #222222
       font-size: 16px
       font-weight: 700
       text-transform: uppercase
       &_active
-         // Text style for "$900"
          color: #f16d7f
       padding-bottom: 22px
       margin-bottom: 17px
@@ -1116,7 +1082,6 @@ body
       display: flex
       justify-content: flex-end
    &__h2
-      // Style for "Sub total"
       color: #4a4a4a
       font-size: 11px
       font-weight: 400
