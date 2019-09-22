@@ -24,14 +24,26 @@ body
    flex-wrap: wrap
    align-content: flex-start
 
-.header_flex
-   display: flex
-   justify-content: space-between
-   align-items: center
-   height: 100%
+.header
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17)
+   border: 1px solid #ececec
+   background-color: #ffffff
+   height: 100px
+   &__form
+      display: flex
+   &_flex
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: 100%
 
-.container__left
-   margin-left: 235px
+.container
+   width: 100%
+   &__left
+      margin-left: 235px
+   &__right
+      margin-right: 231px
+      position: relative
 
 .search__browse
    justify-content: center
@@ -46,16 +58,6 @@ body
    font-weight: 300
    /*line-height: 32px*/
    letter-spacing: 0.35px
-   position: relative
-
-.header
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17)
-   border: 1px solid #ececec
-   background-color: #ffffff
-   height: 100px
-
-.container__right
-   margin-right: 231px
    position: relative
 
 .logo
@@ -79,9 +81,6 @@ body
       letter-spacing: 0.68px
    &__img
       margin-right: 13px
-
-.header__form
-   display: flex
 
 .cart__img
    margin-right: 26px
@@ -319,6 +318,10 @@ body
    background-color: #222224
    flex-direction: column
    justify-content: space-around
+   &_full
+      width: 1600px
+      height: 341px
+      background-color: #222224
    &__header
       color: #fbfbfb
       font-size: 20px
@@ -349,9 +352,9 @@ body
    height: 438px
    width: 100%
    &__back
-      background: no-repeat url(img/Sub_back.png)
-      width: 1600px
-      height: 100%
+      background: url(img/Sub_back_1.png) no-repeat, url(img/Sub_back_2.png) no-repeat
+      width: 1618px
+      height: 438px
       justify-content: flex-start
       align-items: flex-start
 
