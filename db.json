@@ -1,0 +1,196 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Imya1",
+      "age": 40,
+      "e-mail": "mail1@domen.com",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "name": "Imya2",
+      "age": 50,
+      "e-mail": "mail2@domen.com",
+      "password": "12345"
+    },
+    {
+      "id": 3,
+      "name": "Imya3",
+      "age": 60,
+      "e-mail": "mail3@domen.com",
+      "password": "12345"
+    }
+  ],
+  "catalog": [
+    {
+      "id": 1,
+      "product_name": "MANGO White T-Shirt",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_1.png",
+      "img_medium": "img/Product_1.png",
+      "img_large": ""
+    },
+    {
+      "id": 2,
+      "product_name": "MANGO Red Blouse",
+      "price": 52,
+      "amount": 1,
+      "category": "women",
+      "img_small": "img/product_mini/Product_2.png",
+      "img_medium": "img/Product_2.png",
+      "img_large": ""
+    },
+    {
+      "id": 3,
+      "product_name": "MANGO Blue Skirt",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_3.png",
+      "img_medium": "img/Product_3.png",
+      "img_large": ""
+    },
+    {
+      "id": 4,
+      "product_name": "MANGO Flower Blouse",
+      "price": 52,
+      "amount": 1,
+      "category": "women",
+      "img_small": "img/product_mini/Product_4.png",
+      "img_medium": "img/Product_4.png",
+      "img_large": ""
+    },
+    {
+      "id": 5,
+      "product_name": "MANGO B/W Blouse",
+      "price": 52,
+      "amount": 1,
+      "category": "women",
+      "img_small": "img/product_mini/Product_5.png",
+      "img_medium": "img/Product_5.png",
+      "img_large": ""
+    },
+    {
+      "id": 6,
+      "product_name": "MANGO Grey Star",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_6.png",
+      "img_medium": "img/Product_6.png",
+      "img_large": ""
+    },
+    {
+      "id": 7,
+      "product_name": "MANGO Strange Pants",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_7.png",
+      "img_medium": "img/Product_7.png",
+      "img_large": ""
+    },
+    {
+      "id": 8,
+      "product_name": "MANGO LOL Hat",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_8.png",
+      "img_medium": "img/Product_8.png",
+      "img_large": ""
+    },
+    {
+      "id": 12,
+      "product_name": "MANGO Strange T-SHIRT",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_12.jpg",
+      "img_medium": "img/Product_12.jpg",
+      "img_large": ""
+    },
+    {
+      "id": 13,
+      "product_name": "MANGO Black Long Smth",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_13.jpg",
+      "img_medium": "img/Product_13.jpg",
+      "img_large": ""
+    },
+    {
+      "id": 14,
+      "product_name": "MANGO Black Coat",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_14.jpg",
+      "img_medium": "img/Product_14.jpg",
+      "img_large": ""
+    },
+    {
+      "id": 15,
+      "product_name": "MANGO Cool Beard",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_15.jpg",
+      "img_medium": "img/Product_15.jpg",
+      "img_large": ""
+    },
+    {
+      "id": 16,
+      "product_name": "MANGO Black Romb Coat",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_16.jpg",
+      "img_medium": "img/Product_16.jpg",
+      "img_large": ""
+    },
+    {
+      "id": 17,
+      "product_name": "MANGO Cool Cardigan",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_17.jpg",
+      "img_medium": "img/Product_17.jpg",
+      "img_large": ""
+    }
+  ],
+  "totalCart": [
+    {
+      "id": "cart",
+      "amount": 52,
+      "countGoods": 1
+    }
+  ],
+  "cart": [
+    {
+      "id": 17,
+      "product_name": "MANGO Cool Cardigan",
+      "price": 52,
+      "amount": "12",
+      "category": "men",
+      "img_small": "img/product_mini/Product_17.jpg",
+      "img_medium": "img/Product_17.jpg",
+      "img_large": ""
+    },
+    {
+      "id": 7,
+      "product_name": "MANGO Strange Pants",
+      "price": 52,
+      "amount": 1,
+      "category": "men",
+      "img_small": "img/product_mini/Product_7.png",
+      "img_medium": "img/Product_7.png",
+      "img_large": ""
+    }
+  ]
+}
