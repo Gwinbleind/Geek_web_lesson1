@@ -1,9 +1,8 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
 }
-<<<<<<< Updated upstream
-=======
 
 a {
   text-decoration: none;
@@ -28,6 +27,14 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
+}
+
+.price_x {
+  font-size: 10px;
+}
+
+.total_left {
+  float: left;
 }
 
 .header {
@@ -140,6 +147,12 @@ body {
   margin-right: 26px;
   padding-top: 9px;
   z-index: 1;
+}
+.cart__img_red {
+  margin-right: 15px;
+}
+.cart__img_red svg {
+  fill: #ef5b70;
 }
 .cart__check {
   /* Style for "Checkout" */
@@ -684,24 +697,6 @@ body {
   left: 67px;
 }
 
-.brand__text {
-  color: #898989;
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 0.35px;
-  line-height: 24px;
-  margin-top: 29px;
-}
-
-.nav__company {
-  color: #f16d7f;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  text-transform: uppercase;
-  letter-spacing: 0.45px;
-}
-
 .footer {
   margin-top: 109px;
   display: flex;
@@ -740,6 +735,24 @@ body {
   display: block;
 }
 
+.brand__text {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.35px;
+  line-height: 24px;
+  margin-top: 29px;
+}
+
+.nav__company {
+  color: #f16d7f;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+}
+
 .copyright {
   background-color: #e6e6e6;
   display: flex;
@@ -773,8 +786,7 @@ body {
   /* Text style for "пѓЎ," */
   letter-spacing: 0.4px;
 }
-
-.social__border:hover {
+.social__borderhover {
   background-color: #f16d7f;
   color: #f7f7f8;
 }
@@ -891,15 +903,6 @@ body {
   font-size: 11px;
 }
 
-.price_x {
-  /* Text style for "x" */
-  font-size: 10px;
-}
-
-.total_left {
-  float: left;
-}
-
 .new__flex {
   background-color: #f8f3f4;
   display: flex;
@@ -975,8 +978,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 34px;
 }
-
-.prod__name {
+.prodname {
   /* Style for "Moschino C" */
   color: #4d4d4d;
   font-size: 18px;
@@ -984,8 +986,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 67px;
 }
-
-.prod__text {
+.prodtext {
   /* Style for "Compelling" */
   color: #5e5e5e;
   font-size: 14px;
@@ -994,28 +995,13 @@ body {
   margin-bottom: 28px;
   text-align: center;
 }
-
-.prod__properties {
+.prodproperties {
   display: flex;
   justify-content: space-between;
   width: 334px;
   margin-bottom: 37px;
 }
-
-.prop__prop {
-  /* Style for "MATERIAL:" */
-  color: #b9b9b9;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.prop__value {
-  /* Text style for "COTTON" */
-  color: #2f2f2f;
-}
-
-.prod__price {
+.prodprice {
   /* Style for "$561" */
   color: #ef5b70;
   font-size: 24px;
@@ -1026,8 +1012,7 @@ body {
   text-align: center;
   margin-bottom: 63px;
 }
-
-.prod__choose {
+.prodchoose {
   width: 538px;
   display: flex;
   justify-content: space-between;
@@ -1038,6 +1023,29 @@ body {
   text-transform: uppercase;
   margin-bottom: 28px;
 }
+.prodadd {
+  /* Style for "Rectangle" */
+  border: 1px solid #ef5b70;
+  background-color: #ffffff;
+  /* Style for "Add to Car" */
+  color: #ef5b70;
+  font-size: 16px;
+  font-weight: 700;
+  width: 537px;
+  height: 55px;
+}
+
+.prop__prop {
+  /* Style for "MATERIAL:" */
+  color: #b9b9b9;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.propvalue {
+  /* Text style for "COTTON" */
+  color: #2f2f2f;
+}
 
 .choose__color_sign {
   width: 12px;
@@ -1045,7 +1053,16 @@ body {
   margin-right: 11px;
   background-color: #ef5b70;
 }
-
+.choose__container {
+  width: 144px;
+  height: 61px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.choose__dropsign {
+  font-size: 14px;
+}
 .choose__box, .shipping_form__box {
   width: 118px;
   height: 33px;
@@ -1085,38 +1102,6 @@ body {
   margin-bottom: 20px;
   width: 335px;
   box-sizing: border-box;
-}
-
-.choose__container {
-  width: 144px;
-  height: 61px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.choose__dropsign {
-  font-size: 14px;
-}
-
-.prod__add {
-  /* Style for "Rectangle" */
-  border: 1px solid #ef5b70;
-  background-color: #ffffff;
-  /* Style for "Add to Car" */
-  color: #ef5b70;
-  font-size: 16px;
-  font-weight: 700;
-  width: 537px;
-  height: 55px;
-}
-
-.cart__img_red {
-  margin-right: 15px;
-}
-
-.cart__img_red svg {
-  fill: #ef5b70;
 }
 
 .also {
@@ -1230,4 +1215,3 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
->>>>>>> Stashed changes

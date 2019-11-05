@@ -24,6 +24,12 @@ body
    flex-wrap: wrap
    align-content: flex-start
 
+.price_x
+   font-size: 10px
+
+.total_left
+   float: left
+
 .header
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17)
    border: 1px solid #ececec
@@ -118,6 +124,10 @@ body
       margin-right: 26px
       padding-top: 9px
       z-index: 1
+      &_red
+         margin-right: 15px
+      &_red svg
+         fill: #ef5b70
    &__check
       /* Style for "Checkout" */
       color: #f16d7f
@@ -573,23 +583,6 @@ body
       top: -6px
       left: 67px
 
-
-.brand__text
-   color: #898989
-   font-size: 14px
-   font-weight: 300
-   letter-spacing: 0.35px
-   line-height: 24px
-   margin-top: 29px
-
-.nav__company
-   color: #f16d7f
-   font-size: 18px
-   font-weight: 700
-   line-height: 26px
-   text-transform: uppercase
-   letter-spacing: 0.45px
-
 .footer
    margin-top: 109px
    display: flex
@@ -622,6 +615,22 @@ body
       margin-bottom: 40px
       display: block
 
+.brand__text
+   color: #898989
+   font-size: 14px
+   font-weight: 300
+   letter-spacing: 0.35px
+   line-height: 24px
+   margin-top: 29px
+
+.nav__company
+   color: #f16d7f
+   font-size: 18px
+   font-weight: 700
+   line-height: 26px
+   text-transform: uppercase
+   letter-spacing: 0.45px
+
 .copy
    &right
       background-color: #e6e6e6
@@ -652,10 +661,9 @@ body
    font-weight: 400
    /* Text style for "пѓЎ," */
    letter-spacing: 0.4px
-
-.social__border:hover
-   background-color: #f16d7f
-   color: #f7f7f8
+   &hover
+      background-color: #f16d7f
+      color: #f7f7f8
 
 .drop
    /* Style for "Rounded Re" */
@@ -755,14 +763,6 @@ body
       height: 35px
       font-size: 11px
 
-
-.price_x
-   /* Text style for "x" */
-   font-size: 10px
-
-.total_left
-   float: left
-
 .new
    &__flex
       background-color: #f8f3f4
@@ -823,137 +823,124 @@ body
       padding-bottom: 122px
       z-index: 1
 
-.prod__collection
-   /* Style for "WOMEN COLL" */
-   color: #f16d7f
-   font-size: 14px
-   font-weight: 700
-   text-transform: uppercase
-   margin-bottom: 34px
-
-.prod__name
-   /* Style for "Moschino C" */
-   color: #4d4d4d
-   font-size: 18px
-   font-weight: 400
-   text-transform: uppercase
-   margin-bottom: 67px
-
-.prod__text
-   /* Style for "Compelling" */
-   color: #5e5e5e
-   font-size: 14px
-   font-weight: 300
-   width: 618px
-   margin-bottom: 28px
-   text-align: center
-
-.prod__properties
-   display: flex
-   justify-content: space-between
-   width: 334px
-   margin-bottom: 37px
-
-.prop__prop
-   /* Style for "MATERIAL:" */
-   color: #b9b9b9
-   font-size: 14px
-   font-weight: 700
-   text-transform: uppercase
-
-.prop__value
-   /* Text style for "COTTON" */
-   color: #2f2f2f
-
-.prod__price
-   /* Style for "$561" */
-   color: #ef5b70
-   font-size: 24px
-   font-weight: 700
-   padding-bottom: 43px
-   border-bottom: 1px solid #eaeaea
-   width: 642px
-   text-align: center
-   margin-bottom: 63px
-
-.prod__choose
-   width: 538px
-   display: flex
-   justify-content: space-between
-   /* Style for "CHOOSE COL" */
-   color: #2f2f2f
-   font-size: 14px
-   font-weight: 700
-   text-transform: uppercase
-   margin-bottom: 28px
-
-.choose__color_sign
-   width: 12px
-   height: 12px
-   margin-right: 11px
-   background-color: #ef5b70
-
-.choose__box
-   width: 118px
-   height: 33px
-   border: 1px solid #eaeaea
-   background-color: #ffffff
-   color: #bcbcbc
-   font-size: 13px
-   font-weight: 400
-   display: flex
-   align-items: center
-   justify-content: space-between
-   padding-left: 15px
-   padding-right: 9px
-   &::-webkit-input-placeholder
-      color: #b1b1b1
-   &::-moz-placeholder
-      color: #b1b1b1
-   &:-ms-input-placeholder
-      color: #b1b1b1
-   &_cart
-      width: 54px
-      height: 30px
-      padding: 0
+.prod
+   &__collection
+      /* Style for "WOMEN COLL" */
+      color: #f16d7f
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      margin-bottom: 34px
+   &name
+      /* Style for "Moschino C" */
+      color: #4d4d4d
+      font-size: 18px
+      font-weight: 400
+      text-transform: uppercase
+      margin-bottom: 67px
+   &text
+      /* Style for "Compelling" */
+      color: #5e5e5e
+      font-size: 14px
+      font-weight: 300
+      width: 618px
+      margin-bottom: 28px
       text-align: center
-      &::-webkit-outer-spin-button,
-      &::-webkit-inner-spin-button
-         /* display: none; <- Crashes Chrome on hover */
-         -webkit-appearance: none
-         margin: 0
-         /* <-- Apparently some margin are still there even though it's hidden */
-   &_ship
-      margin-bottom: 20px
-      width: 335px
-      box-sizing: border-box
+   &properties
+      display: flex
+      justify-content: space-between
+      width: 334px
+      margin-bottom: 37px
+   &price
+      /* Style for "$561" */
+      color: #ef5b70
+      font-size: 24px
+      font-weight: 700
+      padding-bottom: 43px
+      border-bottom: 1px solid #eaeaea
+      width: 642px
+      text-align: center
+      margin-bottom: 63px
+   &choose
+      width: 538px
+      display: flex
+      justify-content: space-between
+      /* Style for "CHOOSE COL" */
+      color: #2f2f2f
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      margin-bottom: 28px
+   &add
+      /* Style for "Rectangle" */
+      border: 1px solid #ef5b70
+      background-color: #ffffff
+      /* Style for "Add to Car" */
+      color: #ef5b70
+      font-size: 16px
+      font-weight: 700
+      width: 537px
+      height: 55px
 
-.choose__container
-   width: 144px
-   height: 61px
-   display: flex
-   flex-direction: column
-   justify-content: space-between
+.prop
+   &__prop
+      /* Style for "MATERIAL:" */
+      color: #b9b9b9
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+   &value
+      /* Text style for "COTTON" */
+      color: #2f2f2f
 
-.choose__dropsign
-   font-size: 14px
-
-.prod__add
-   /* Style for "Rectangle" */
-   border: 1px solid #ef5b70
-   background-color: #ffffff
-   /* Style for "Add to Car" */
-   color: #ef5b70
-   font-size: 16px
-   font-weight: 700
-   width: 537px
-   height: 55px
-
-.cart__img_red
-   margin-right: 15px
-
-.cart__img_red svg
-   fill: #ef5b70
+.choose
+   &__color_sign
+      width: 12px
+      height: 12px
+      margin-right: 11px
+      background-color: #ef5b70
+   &__container
+      width: 144px
+      height: 61px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+   &__dropsign
+      font-size: 14px
+   &__box
+      width: 118px
+      height: 33px
+      border: 1px solid #eaeaea
+      background-color: #ffffff
+      color: #bcbcbc
+      font-size: 13px
+      font-weight: 400
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-left: 15px
+      padding-right: 9px
+      &::-webkit-input-placeholder
+         color: #b1b1b1
+      &::-moz-placeholder
+         color: #b1b1b1
+      &:-ms-input-placeholder
+         color: #b1b1b1
+      &_cart
+         width: 54px
+         height: 30px
+         padding: 0
+         text-align: center
+         &::-webkit-outer-spin-button,
+         &::-webkit-inner-spin-button
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none
+            margin: 0
+            /* <-- Apparently some margin are still there even though it's hidden */
+      &_ship
+         margin-bottom: 20px
+         width: 335px
+         box-sizing: border-box
 
 .also
    display: flex
