@@ -1,22 +1,31 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Imya1",
+      "id": "Imya1",
       "age": 40,
       "e-mail": "mail1@domen.com",
-      "password": "12345"
+      "password": "12345",
+      "cart": [
+        {
+          "id": 2,
+          "product_name": "MANGO Red Blouse",
+          "price": 52,
+          "amount": 1,
+          "category": "women",
+          "img_small": "img/product_mini/Product_2.png",
+          "img_medium": "img/Product_2.png",
+          "img_large": ""
+        }
+      ]
     },
     {
-      "id": 2,
-      "name": "Imya2",
+      "id": "Imya2",
       "age": 50,
       "e-mail": "mail2@domen.com",
       "password": "12345"
     },
     {
-      "id": 3,
-      "name": "Imya3",
+      "id": "Imya3",
       "age": 60,
       "e-mail": "mail3@domen.com",
       "password": "12345"
@@ -164,32 +173,18 @@
       "img_large": ""
     }
   ],
-  "totalCart": [
-    {
-      "id": "cart",
-      "amount": 52,
-      "countGoods": 1
-    }
-  ],
+  "userSettings": {
+    "username": "Imya1"
+  },
   "cart": [
     {
-      "id": 17,
-      "product_name": "MANGO Cool Cardigan",
-      "price": 52,
-      "amount": "12",
-      "category": "men",
-      "img_small": "img/product_mini/Product_17.jpg",
-      "img_medium": "img/Product_17.jpg",
-      "img_large": ""
-    },
-    {
-      "id": 7,
-      "product_name": "MANGO Strange Pants",
+      "id": 3,
+      "product_name": "MANGO Blue Skirt",
       "price": 52,
       "amount": 1,
       "category": "men",
-      "img_small": "img/product_mini/Product_7.png",
-      "img_medium": "img/Product_7.png",
+      "img_small": "img/product_mini/Product_3.png",
+      "img_medium": "img/Product_3.png",
       "img_large": ""
     }
   ]

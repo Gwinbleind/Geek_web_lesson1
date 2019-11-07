@@ -167,22 +167,63 @@ const app = new Vue({
          totalCost: 0,
          items: [],
       },
+      userName: '',
+      userPassword: '',
+      loginForm: {
+         Name: '',
+         Password: '',
+      },
+      registerForm: {
+         Name: '',
+         Password: '',
+      },
+      user: {
+         name: '',
+         mail : '',
+         age: '',
+      },
    },
    methods: {
       fetchRequest(url) {
          return fetch(url)
-            .then(response => response.json())
+            .then(response => response.json(), reason => reason)
       },
       fetchCatalog() {
-         this.fetchRequest('/catalog').then(items => {
-            this.catalog = items;
-            this.filteredCatalog = items;
-         })
+         this.fetchRequest('/catalog')
+            .then(items => {
+               this.catalog = items;
+               this.filteredCatalog = items;
+            })
       },
       fetchCart() {
          this.fetchRequest('/cart').then(items => {
             this.cart.items = items
          });
+      },
+      fetchCurrentUser() {
+         return this.fetchRequest('/userSettings')
+            .then(settings => {
+               return new Promise(((resolve, reject) => {
+                  if (settings.username !== '') {
+                     this.user.name = settings.username;
+                     resolve(settings.username);
+                  } else {reject('empty name')}
+               }))
+            });
+      },
+      fetchUser() {
+         return this.fetchRequest(`/users/${this.user.name}`)
+            .then(user => {
+               if (user.id) {
+                  // OK
+                  this.user.name = user.id;
+                  this.user.age = user.age;
+                  this.user.mail = user["e-mail"];
+               } else {
+                  // Err
+               }
+               // return user
+            })
       },
       filterCatalog() {
          const regExp = new RegExp(this.query,'i');
@@ -283,6 +324,16 @@ const app = new Vue({
    },
    mounted: function () {
       this.fetchCatalog();
-      this.fetchCart();
+      this.fetchCurrentUser()
+         .then(() => this.fetchUser())
+         .then(() => {
+            this.fetchRequest(`/users/${this.user.name}`)
+               .then(user => {
+                  this.cart.items = user.cart
+               })
+         })
+         .catch(error => {
+            this.fetchCart();
+         });
    },
 });
