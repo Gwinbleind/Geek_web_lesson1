@@ -74,29 +74,30 @@
 						<a href="#" class="button_goto div_flex"><span>Go to cart</span></a>
 					</div>  <!--Выпадающая корзина-->
 				</div>
-				<div class="my_account div_flex">
+				<div class="my_account button div_flex">
 					<span>My Account</span>
 					<span class="my_account__fa_caret"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+					<!--Выпадающее меню аккаунт-->
 					<div id="dropUser" class="drop drop__account">
 						<div v-if="user.name !== ''">
-							<p>Username: {{user.name}}</p>
-							<p>E-mail: {{user.mail}}</p>
-							<p>Age: {{user.age}}</p>
-							<button @click="logoutClickHandler">Logout</button>
+							<p class="drop__link">Username: {{user.name}}</p>
+							<p class="drop__link">E-mail: {{user.mail}}</p>
+							<p class="drop__link">Age: {{user.age}}</p>
+<!--							<button @click="logoutClickHandler">Logout</button>-->
+							<div class="button button_login div_flex" @click="logoutClickHandler">Logout</div>
 						</div>
 						<div v-else>
 							<a href="user.html">Login</a>
 						</div>
 					</div>
 				</div>
-				<!--Выпадающее меню аккаунт-->
 			</div>
 		</div>
 	</header>
 	<nav>
 		<!-- Список меню -->
 		<ul class="menu">
-			<li class="menu__list"><a href="#" class="menu__link">Home</a></li>
+			<li class="menu__list"><a href="index.html" class="menu__link">Home</a></li>
 			<li class="menu__list"><a href="product.html" class="menu__link">Man</a></li>
 			<li class="menu__list">
 				<a href="product.html" class="menu__link">Women</a>
@@ -199,26 +200,26 @@
 		</ul>
 	</nav>
 	<div class="container">
-		<div class="container_horizontal div_colwrap">
+		<div class="container_horizontal div_flex">
 			<div class="div_colwrap div_flex" v-if="user.name === ''">
 				<div class="div_flex">
 					<div :class="loginButtonClass(!logOrRegStatus)" @click="loginOrRegisterClickHandler(0)"><span>Log In</span></div>
 					<div :class="loginButtonClass(logOrRegStatus)" @click="loginOrRegisterClickHandler(1)"><span>Register</span></div>
 				</div>
-				<label>Username:<input class="search__text" type="text" v-model="loginForm.Name" required></label>
-				<label>Password:<input class="search__text" type="password" v-model="loginForm.Password" required></label>
+				<label class="div_flex my_account__label">Username:<input class="choose__box" type="text" v-model="loginForm.Name" required></label>
+				<label class="div_flex my_account__label">Password:<input class="choose__box" type="password" v-model="loginForm.Password" required></label>
 				<template v-if="logOrRegStatus">
-					<label>E-mail:<input class="search__text" type="email" v-model="registerForm.Mail" required></label>
-					<label>Age:<input class="search__text" type="number" v-model="registerForm.Age" required></label>
+					<label class="div_flex my_account__label">E-mail:<input class="choose__box" type="email" v-model="registerForm.Mail" required></label>
+					<label class="div_flex my_account__label">Age:<input class="choose__box" type="number" v-model="registerForm.Age" required></label>
 				</template>
-				<div class="my_account button div_flex" @click="loginClickHandler">{{logOrReg}}</div>
+				<div class="button button_login div_flex" @click="logOrRegHandler">{{logOrReg}}</div>
 			</div>
-			<template v-else>
-				<p>Username: {{user.name}}</p>
-				<p>E-mail: {{user.mail}}</p>
-				<p>Age: {{user.age}}</p>
-				<button @click="logoutClickHandler">Logout</button>
-			</template>
+			<div v-else>
+				<p class="footer__link">Username: {{user.name}}</p>
+				<p class="footer__link">E-mail: {{user.mail}}</p>
+				<p class="footer__link">Age: {{user.age}}</p>
+				<div class="button button_login div_flex" @click="logoutClickHandler">Logout</div>
+			</div>
 		</div>
 	</div>
 	<div class="subscribe div_flex">

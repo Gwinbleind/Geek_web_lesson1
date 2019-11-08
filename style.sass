@@ -211,6 +211,7 @@ body
       margin-left: 8px
    &__button
       &_active
+         margin-bottom: 15px
          font-size: 14px
          color: #f16d7f
          font-weight: 700
@@ -223,6 +224,12 @@ body
          color: #4a4a4a
          border: 1px solid #eaeaea
          background-color: #ffffff
+   &__label
+      justify-content: space-between
+      width: 235px
+      margin-bottom: 10px
+   &__info
+
 .menu
    background-color: #ffffff
    display: flex
@@ -797,6 +804,11 @@ body
          width: 118px
          height: 35px
          font-size: 11px
+   &_login
+      @extend .my_account
+      width: fit-content
+      height: fit-content
+      padding: 5px 10px
 
 .new
    &__flex
@@ -968,10 +980,8 @@ body
          text-align: center
          &::-webkit-outer-spin-button,
          &::-webkit-inner-spin-button
-            /* display: none <- Crashes Chrome on hover */
             -webkit-appearance: none
             margin: 0
-            /* <-- Apparently some margin are still there even though it's hidden */
       &_ship
          margin-bottom: 20px
          width: 335px

@@ -1,47 +1,19 @@
 {
   "users": [
     {
-      "id": "Imya1",
-      "age": 40,
-      "e-mail": "mail1@domen.com",
-      "password": "12345",
-      "cart": [
-        {
-          "id": 3,
-          "product_name": "MANGO Blue Skirt",
-          "price": 52,
-          "amount": 1,
-          "category": "men",
-          "img_small": "img/product_mini/Product_3.png",
-          "img_medium": "img/Product_3.png",
-          "img_large": ""
-        }
-      ]
-    },
-    {
-      "id": "Imya2",
-      "age": 50,
-      "e-mail": "mail2@domen.com",
-      "password": "12345",
+      "id": "Test1",
+      "password": "abcABC123",
+      "age": "42",
+      "e-mail": "1@2.ru",
       "cart": [
         {
           "id": 2,
           "product_name": "MANGO Red Blouse",
           "price": 52,
-          "amount": 1,
+          "amount": 3,
           "category": "women",
           "img_small": "img/product_mini/Product_2.png",
           "img_medium": "img/Product_2.png",
-          "img_large": ""
-        },
-        {
-          "id": 3,
-          "product_name": "MANGO Blue Skirt",
-          "price": 52,
-          "amount": 1,
-          "category": "men",
-          "img_small": "img/product_mini/Product_3.png",
-          "img_medium": "img/Product_3.png",
           "img_large": ""
         },
         {
@@ -55,12 +27,6 @@
           "img_large": ""
         }
       ]
-    },
-    {
-      "id": "Imya3",
-      "age": 60,
-      "e-mail": "mail3@domen.com",
-      "password": "12345"
     }
   ],
   "catalog": [

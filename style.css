@@ -230,7 +230,7 @@ body {
   display: flex;
 }
 
-.my_account {
+.my_account, .button_login {
   background-color: #f16d7f;
   color: #ffffff;
   font-size: 15px;
@@ -238,7 +238,7 @@ body {
   height: 38px;
   width: 130px;
 }
-.my_account:hover .drop__account {
+.my_account:hover .drop__account, .button_login:hover .drop__account {
   display: flex;
 }
 .my_account__fa_caret {
@@ -247,6 +247,7 @@ body {
   margin-left: 8px;
 }
 .my_account__button_active, .my_account__button_inactive {
+  margin-bottom: 15px;
   font-size: 14px;
   color: #f16d7f;
   font-weight: 700;
@@ -260,7 +261,11 @@ body {
   border: 1px solid #eaeaea;
   background-color: #ffffff;
 }
-
+.my_account__label {
+  justify-content: space-between;
+  width: 235px;
+  margin-bottom: 10px;
+}
 .menu {
   background-color: #ffffff;
   display: flex;
@@ -939,6 +944,11 @@ body {
   height: 35px;
   font-size: 11px;
 }
+.button_login {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 10px;
+}
 
 .new__flex {
   background-color: #f8f3f4;
@@ -1130,10 +1140,8 @@ body {
   text-align: center;
 }
 .choose__box_cart::-webkit-outer-spin-button, .choose__box_cart::-webkit-inner-spin-button {
-  /* display: none <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */
 }
 .choose__box_ship {
   margin-bottom: 20px;

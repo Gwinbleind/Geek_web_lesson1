@@ -275,8 +275,7 @@ const app = new Vue({
       },
       loginClickHandler() {
          if (this.loginForm.Name !== '') {
-            if (!this.logOrRegStatus) {  //Login
-               fetch(`/users/${this.loginForm.Name}`)
+               return fetch(`/users/${this.loginForm.Name}`)
                // Проверка логина
                   .then(response => {
                      if (response.ok) {
@@ -309,7 +308,7 @@ const app = new Vue({
                   })
                   // Забрать корзину юзера
                   .then(user => {
-                     if (user.cart.length+1) {
+                     if (user.cart && user.cart.length+1) {
                         this.cart.items = user.cart;
                         user.cart.forEach(item => {
                            this.add('/cart',item)
@@ -317,38 +316,47 @@ const app = new Vue({
                      } else {this.cart.items = []}
                   })
                   .catch(error => alert(error))
-            } else {  //Register
-               fetch(`/users/${this.loginForm.Name}`)
-               // Проверка логина
-                  .then(response => {
-                     if (!response.ok) {
-                        return !response.ok
-                     } else {
-                        throw new Error('User already exist')
-                     }
-                  })
-                  //Проверка введенных данных
-                  .then(() => {
-                     if (!regLoginExp.test(this.loginForm.Name)) {throw new Error('Login must be 2-20 symbols from latin and numbers')}
-                     if (!regPasswordExp.test(this.loginForm.Password)) {throw new Error('Password must be at least 8 characters, including latin and special symbols and numbers')}
-                     if (!regMailExp.test(this.registerForm.Mail)) {throw new Error('Enter valid e-mail')}
-                  })
-                  //Создание учетки
-                  .then(() => {
-                     let user = {
-                        id: this.loginForm.Name,
-                        password: this.loginForm.Password,
-                        age: this.registerForm.Age,
-                        'e-mail': this.registerForm.Mail,
-                     };
-                     this.loginForm.Name = '';
-                     this.loginForm.Password = '';
-                     this.registerForm.Age = '';
-                     this.registerForm.Mail = '';
-                     this.add(`/users`, user)
-                  })
-                  .catch(error => alert(error))
-            }}},
+            }},
+      registerClickHandler() {
+            fetch(`/users/${this.loginForm.Name}`)
+            // Проверка логина
+               .then(response => {
+                  if (!response.ok) {
+                     return !response.ok
+                  } else {
+                     throw new Error('User already exist')
+                  }
+               })
+               //Проверка введенных данных
+               .then(() => {
+                  if (!regLoginExp.test(this.loginForm.Name)) {throw new Error('Login must be 2-20 symbols from latin and numbers')}
+                  if (!regPasswordExp.test(this.loginForm.Password)) {throw new Error('Password must be at least 8 characters, including latin and special symbols and numbers')}
+                  if (!regMailExp.test(this.registerForm.Mail)) {throw new Error('Enter valid e-mail')}
+               })
+               //Создание учетки
+               .then(() => {
+                  let user = {
+                     id: this.loginForm.Name,
+                     password: this.loginForm.Password,
+                     age: this.registerForm.Age,
+                     'e-mail': this.registerForm.Mail,
+                     cart: [],
+                  };
+                  return this.add(`/users`, user);
+               })
+               //Входим в учетку
+               .then(() => {
+                  return this.loginClickHandler()
+               })
+               //Подчищвем хвосты
+               .then(() => {
+                  this.loginForm.Name = '';
+                  this.loginForm.Password = '';
+                  this.registerForm.Age = '';
+                  this.registerForm.Mail = '';
+               })
+               .catch(error => alert(error))
+      },
       loginOrRegisterClickHandler(type) {
          this.logOrRegStatus = type
       },
@@ -438,7 +446,10 @@ const app = new Vue({
       },
       logOrReg: function () {
          return this.logOrRegStatus ? 'Register' : 'Login'
-      }
+      },
+      logOrRegHandler: function () {
+         return this.logOrRegStatus ? this.registerClickHandler : this.loginClickHandler
+      },
    },
    mounted: function () {
       this.fetchCatalog();
