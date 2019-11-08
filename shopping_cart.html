@@ -75,6 +75,17 @@
             <div class="my_account div_flex">
                <span>My Account</span>
                <span class="my_account__fa_caret"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+               <div id="dropUser" class="drop drop__account">
+                  <div v-if="user.name !== ''">
+                     <p>Username: {{user.name}}</p>
+                     <p>E-mail: {{user.mail}}</p>
+                     <p>Age: {{user.age}}</p>
+                     <button @click="logoutClickHandler">Logout</button>
+                  </div>
+                  <div v-else>
+                     <a href="user.html">Login</a>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
