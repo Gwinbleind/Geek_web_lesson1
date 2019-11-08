@@ -119,6 +119,11 @@ body {
   border-radius: 0 3px 3px 0;
   border: 1px solid #e6e6e6;
   background-color: #ffffff;
+  height: 38px;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
 }
 
 .logo {
@@ -233,10 +238,27 @@ body {
   height: 38px;
   width: 130px;
 }
+.my_account:hover .drop__account {
+  display: flex;
+}
 .my_account__fa_caret {
   font-size: 14px;
   font-weight: 400;
   margin-left: 8px;
+}
+.my_account__button_active, .my_account__button_inactive {
+  font-size: 14px;
+  color: #f16d7f;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #f16d7f;
+  width: 65px;
+  padding: 10px;
+}
+.my_account__button_inactive {
+  color: #4a4a4a;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
 }
 
 .menu {
@@ -802,12 +824,10 @@ body {
   /* Style for "Background" */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
   border: 1px solid #e9e9e9;
-  /*position: relative;*/
   z-index: 1;
 }
 .drop::before {
   top: -18px;
-  left: 63px;
   content: "";
   border: 9px solid transparent;
   border-bottom: 9px solid #e9e9e9;
@@ -815,7 +835,6 @@ body {
 }
 .drop::after {
   top: -14px;
-  left: 65px;
   content: "";
   border: 7px solid transparent;
   border-bottom: 7px solid #ffffff;
@@ -879,7 +898,25 @@ body {
 .drop__cart::before {
   left: 26px;
 }
+.drop__account {
+  display: none;
+  position: absolute;
+  color: black;
+  top: 19px;
+  right: -21px;
+  margin: 20px;
+  width: max-content;
+}
+.drop__account::after {
+  right: 15px;
+}
+.drop__account::before {
+  right: 13px;
+}
 
+.button {
+  cursor: pointer;
+}
 .button_goto {
   /* Style for "Go to cart" */
   color: #4a4a4a;
@@ -1093,7 +1130,7 @@ body {
   text-align: center;
 }
 .choose__box_cart::-webkit-outer-spin-button, .choose__box_cart::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
+  /* display: none <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
   /* <-- Apparently some margin are still there even though it's hidden */
