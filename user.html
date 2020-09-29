@@ -20,7 +20,7 @@
 		<div class="header_flex">
 			<!-- Левая часть -->
 			<div class="container__left div_flex">
-				<a href="#" class="logo div_flex">
+				<a href="index.html" class="logo div_flex">
 					<img class="logo__img" src="img\logo.png" alt="logo"><span class="logo_1">BRAN</span><span
 						  class="logo_2"><b>D</b></span>
 				</a>
@@ -74,17 +74,16 @@
 						<a href="#" class="button_goto div_flex"><span>Go to cart</span></a>
 					</div>  <!--Выпадающая корзина-->
 				</div>
-				<div class="my_account div_flex">
+				<div class="my_account button div_flex">
 					<span>My Account</span>
 					<span class="my_account__fa_caret"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
 					<!--Выпадающее меню аккаунт-->
 					<div id="dropUser" class="drop drop__account">
 						<div v-if="user.name !== ''">
-							<a class="story__name" href="user.html">Account</a>
 							<p class="drop__link">Username: {{user.name}}</p>
 							<p class="drop__link">E-mail: {{user.mail}}</p>
 							<p class="drop__link">Age: {{user.age}}</p>
-							<!--							<button @click="logoutClickHandler">Logout</button>-->
+<!--							<button @click="logoutClickHandler">Logout</button>-->
 							<div class="button button_login div_flex" @click="logoutClickHandler">Logout</div>
 						</div>
 						<div v-else>
@@ -98,7 +97,7 @@
 	<nav>
 		<!-- Список меню -->
 		<ul class="menu">
-			<li class="menu__list"><a href="#" class="menu__link">Home</a></li>
+			<li class="menu__list"><a href="index.html" class="menu__link">Home</a></li>
 			<li class="menu__list"><a href="product.html" class="menu__link">Man</a></li>
 			<li class="menu__list">
 				<a href="product.html" class="menu__link">Women</a>
@@ -200,82 +199,26 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="promo">
-		<div class="promo__back div_flex">
-			<div class="promo__line"></div>
-			<div class="promo__text">
-				<p class="promo__text_big">THE BRAND</p>
-				<p class="promo__text_min">OF LUXERIOUS <span class="promo__text_red">FASHION</span></p>
-			</div>
-		</div>
-	</div>
-	<nav class="category div_flex">
-		<div class="category_flex div_flex">
-			<div class="category__margin category__men">
-				<div class="category__name">
-					<span class="category__name_1">hot deal</span>
-					<br>
-					<span class="category__name_2">for men</span>
+	<div class="container">
+		<div class="container_horizontal div_flex">
+			<div class="div_colwrap div_flex" v-if="user.name === ''">
+				<div class="div_flex">
+					<div :class="loginButtonClass(!logOrRegStatus)" @click="loginOrRegisterClickHandler(0)"><span>Log In</span></div>
+					<div :class="loginButtonClass(logOrRegStatus)" @click="loginOrRegisterClickHandler(1)"><span>Register</span></div>
 				</div>
+				<label class="div_flex my_account__label">Username:<input class="choose__box" type="text" v-model="loginForm.Name" required></label>
+				<label class="div_flex my_account__label">Password:<input class="choose__box" type="password" v-model="loginForm.Password" required></label>
+				<template v-if="logOrRegStatus">
+					<label class="div_flex my_account__label">E-mail:<input class="choose__box" type="email" v-model="registerForm.Mail" required></label>
+					<label class="div_flex my_account__label">Age:<input class="choose__box" type="number" v-model="registerForm.Age" required></label>
+				</template>
+				<div class="button button_login div_flex" @click="logOrRegHandler">{{logOrReg}}</div>
 			</div>
-			<div class="category__margin category__accesories">
-				<div class="category__name">
-					<span class="category__name_1">LUXIROUS & trendy</span>
-					<br>
-					<span class="category__name_2">ACCESORIES</span>
-				</div>
-			</div>
-			<div class="category__margin category__women">
-				<div class="category__name">
-					<span class="category__name_1">30% offer</span>
-					<br>
-					<span class="category__name_2">women</span>
-				</div>
-			</div>
-			<div class="category__margin category__kids">
-				<div class="category__name">
-					<span class="category__name_1">new arrivals</span>
-					<br>
-					<span class="category__name_2">for kids</span>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<nav class="products div_flex">
-		<header class="products__header div_flex">
-			<div class="products__h1">Fetured Items</div>
-			<div class="products__h2">Shop for items based on what we featured in this week</div>
-		</header>
-		<catalog-list-component :cols="4" :items="catalog" @buy="productsBoxClickHandler"></catalog-list-component>
-		<div class="products__button div_flex"><span>Browse All Product</span></div>
-	</nav>
-	<div class="feature div_flex">
-		<div class="feature__offer">
-			<div class="feature__text">
-				<span class="feature__text_1">30% <span class="feature__text_2">OFFER</span></span>
-				<br><span class="feature__text_3">FOR WOMEN</span></div>
-		</div>
-		<div class="marketing div_flex">
-			<div class="marketing__container">
-				<img class="marketing__img" src="img/Feature_1.svg" alt="">
-				<div class="marketing__header">Free Delivery</div>
-				<div class="marketing__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-					extensive models.
-				</div>
-			</div>
-			<div class="marketing__container">
-				<img class="marketing__img" src="img/Feature_2.svg" alt="">
-				<div class="marketing__header">Sales & discounts</div>
-				<div class="marketing__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-					extensive models.
-				</div>
-			</div>
-			<div class="marketing__container">
-				<img class="marketing__img" src="img/Feature_3.svg" alt="">
-				<div class="marketing__header">Quality assurance</div>
-				<div class="marketing__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with
-					extensive models.
-				</div>
+			<div v-else>
+				<p class="footer__link">Username: {{user.name}}</p>
+				<p class="footer__link">E-mail: {{user.mail}}</p>
+				<p class="footer__link">Age: {{user.age}}</p>
+				<div class="button button_login div_flex" @click="logoutClickHandler">Logout</div>
 			</div>
 		</div>
 	</div>
